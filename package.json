@@ -1,15 +1,15 @@
 {
-  "name": "carousel-scandiweb",
+  "name": "scanditask",
   "version": "1.0.0",
   "description": "Scandiweb test task",
-  "main": "main.js",
+  "main": "/src/index.js",
   "scripts": {
     "start": "webpack serve",
     "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lenchevskii/carousel-scandiweb.git"
+    "url": "https://github.com/lenchevskii/scanditask.git"
   },
   "keywords": [
     "react",
@@ -19,9 +19,9 @@
   "author": "Dzmitry Liancheuski",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lenchevskii/carousel-scandiweb/issues"
+    "url": "https://github.com/lenchevskii/scanditask/issues"
   },
-  "homepage": "https://github.com/lenchevskii/carousel-scandiweb#readme",
+  "homepage": "https://github.com/lenchevskii/scanditask#readme",
   "dependencies": {
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
@@ -34,13 +34,5 @@
     "webpack": "^5.10.0",
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.1.6",
-    "@babel/preset-env": "^7.1.6",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.4",
-    "webpack": "^4.25.1",
-    "webpack-cli": "^3.1.2"
   }
 }
