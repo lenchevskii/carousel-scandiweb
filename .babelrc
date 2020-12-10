@@ -1,3 +1,5 @@
 {
-  "presets": ["@babel/env", "@babel/react"]
+  "plugins": [
+    [ "module-resolver", { "root": ["./src/app/"] } ] 
+  ]
 }
