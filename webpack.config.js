@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: '/src/index.js',
+  // context: path.resolve(__dirname),
   output: {
     path: path.join(__dirname, '/bundle'),
     filename: 'index_bundle.js'
@@ -15,6 +16,8 @@ module.exports = {
   devServer: {
     inline: true,
     port: 8001
+    // publicPath: path.resolve('/bundle'),
+    // contentBase: path.resolve('./scanditask')
   },
   module: {
     rules: [
@@ -24,6 +27,24 @@ module.exports = {
         loader: 'babel-loader',
         options: {
           presets: ["@babel/react", "@babel/env"]
+        }
+      },
+      {
+        test: /\.css$/i,
+        loader: "css-loader",
+        options: {
+          modules: {
+            compileType: "module",
+            mode: "local",
+            auto: true,
+            exportGlobals: true,
+            localIdentName: "[path][name]__[local]--[hash:base64:5]",
+            localIdentContext: path.resolve(__dirname, "src"),
+            localIdentHashPrefix: "my-custom-hash",
+            namedExport: true,
+            exportLocalsConvention: "camelCase",
+            exportOnlyLocals: false
+          }
         }
       }
     ]
