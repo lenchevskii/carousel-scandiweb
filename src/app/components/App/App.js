@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom"
 import { Header, Footer, Carousel } from 'components'
-import styles from './App.css'
+import styles from './app.css'
 import React from 'react'
 
 const App = () => (

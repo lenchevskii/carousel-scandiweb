@@ -1,0 +1,43 @@
+.slider {
+  border: 1px solid red;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-content: center;
+}
+
+.slide {
+  border: 1px solid blue;
+  min-width: 100%;
+  height: 80vh;
+}
+
+.btn-styles {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10%;
+  height: 80%;
+  background: none;
+}
+
+.goLeft {
+  left: 0;
+}
+
+.goRight {
+  right: 0;
+}
+
+.container {
+  margin: 20px;
+  border: 5px dashed rgb(168, 171, 209);
+}
+.content {
+  font-size: 15px;
+  text-align: center;
+}
