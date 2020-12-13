@@ -1,6 +1,6 @@
 .container {
-  margin: 10px;
-  border: 5px ridge pink;
+  margin: 20px;
+  border: 5px dashed rgb(168, 171, 209);
 }
 .content {
   font-size: 15px;

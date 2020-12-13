@@ -1,12 +1,12 @@
 import React from 'react'
-import styles from './Footer.css'
+import styles from './Carousel.css'
 
-const Footer = () => (
+const Carousel = () => (
   <div className={styles.container}>
       <p className={styles.content}>
-        Foot
+        Carousel
       </p>
   </div>
 )
 
-export default Footer
+export default Carousel

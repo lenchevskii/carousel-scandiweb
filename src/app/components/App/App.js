@@ -1,11 +1,18 @@
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom"
+import { Header, Footer, Carousel } from 'components'
+import styles from './App.css'
 import React from 'react'
-import styles from '../App/App.css'
 
 const App = () => (
   <div className={styles.container}>
-      <p className={styles.content}>
-        Bonjour
-      </p>
+    <Header/>
+    {/* <hr/>
+    <Switch>
+      <Route path="/contact" component={Contact} />
+      <Route component={Notfound} />
+    </Switch> */}
+    <Carousel />
+    <Footer />
   </div>
 )
 
