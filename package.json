@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack --mode production && webpack serve --config ./webpack.config.js --mode development",
     "build": "webpack --mode production",
-    "deploy": "npm run build; push-dir --dir=dist --branch=gh-pages-orphan --cleanup"
+    "deploy": "npm run build; push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "repository": {
     "type": "git",
