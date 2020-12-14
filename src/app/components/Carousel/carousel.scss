@@ -1,35 +1,38 @@
 .slider {
-  border: 1px solid red;
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   display: flex;
-  align-content: center;
+  align-items: center;
 }
 
 .slide {
-  border: 1px solid blue;
+  // position: relative;
+  border: 3px solid black;
   min-width: 100%;
-  height: 80vh;
+  height: 100%;
+  transition: 0.5s;
 }
 
-.btn-styles {
+%btn-styles {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 10%;
-  height: 80%;
+  height: 60vh;
   background: none;
 }
 
-.goLeft {
+#goLeft {
+  @extend %btn-styles;
   left: 0;
 }
 
-.goRight {
+#goRight {
+  @extend %btn-styles;
   right: 0;
 }
 
@@ -37,6 +40,7 @@
   margin: 20px;
   border: 5px dashed rgb(168, 171, 209);
 }
+
 .content {
   font-size: 15px;
   text-align: center;

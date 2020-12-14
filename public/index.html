@@ -7,6 +7,7 @@
 </head>
 <body>
   <div id="root"></div>
-  <script src="./bundle/index_bundle.js"></script>
+  <script type="text/jsx" src="./bundle/index_bundle.js"></script>
+  <!-- add `type="text/jsx"` to prevent `Uncaught TypeError: root.pendingInteractionMap` -->
 </body>
 </html>

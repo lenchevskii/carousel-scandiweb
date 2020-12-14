@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const Webpack = require('webpack')
 
 module.exports = {
   entry: '/src/index.js',
@@ -16,7 +17,9 @@ module.exports = {
   // },
   devServer: {
     inline: true,
-    port: 8001
+    port: 8001,
+    transportMode: 'ws'
+    // injectClient: false
     // publicPath: path.resolve('./bundle'),
     // contentBase: path.resolve('./scanditask')
   },
@@ -63,9 +66,29 @@ module.exports = {
           // Creates `style` nodes from JS strings
           "style-loader",
           // Translates CSS into CommonJS
-          "css-loader",
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true
+            }
+          },
           // Compiles Sass to CSS
-          "sass-loader"
+          "sass-loader",
+          // {
+          //   loader: "postcss-loader",
+          //   options: {
+          //     postcssOptions: {
+          //       plugins: [
+          //         [
+          //           "postcss-preset-env",
+          //           {
+          //             modules: true
+          //           }
+          //         ]
+          //       ]
+          //     }
+          //   }
+          // }
         ]
       }
     ]
@@ -74,7 +97,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html'
     }),
-    new MiniCssExtractPlugin()
+    // new MiniCssExtractPlugin(),
+    new Webpack.DefinePlugin({
+      '__REACT_DEVTOOLS_GLOBAL_HOOK__': '({ isDisabled: true })'
+    })
   ],
   performance: {
     maxEntrypointSize: 5120000,
