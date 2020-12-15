@@ -1,5 +1,0 @@
-{
-  "plugins": [
-    [ "module-resolver", { "root": ["./src/app/"] } ] 
-  ]
-}
