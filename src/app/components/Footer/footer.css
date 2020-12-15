@@ -3,6 +3,8 @@
   border: 5px dashed rgb(168, 171, 209);
 }
 .content {
-  font-size: 15px;
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: larger;
   text-align: center;
 }

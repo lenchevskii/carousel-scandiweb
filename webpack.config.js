@@ -5,16 +5,10 @@ const Webpack = require('webpack')
 
 module.exports = {
   entry: '/src/index.js',
-  // context: path.resolve(__dirname),
   output: {
     path: path.join(__dirname, '/bundle'),
     filename: 'index_bundle.js'
   },
-  // resolve: {
-  //   alias: {
-  //     'components': path.resolve(__dirname, "./src/app/")
-  //   }
-  // },
   devServer: {
     inline: true,
     port: 8001,
@@ -25,6 +19,22 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              bypassOnDebug: true, // webpack@1.x
+              disable: true, // webpack@2.x and newer
+              webp: {
+                quality: 75
+              }
+            }
+          }
+        ]
+      },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
@@ -44,21 +54,6 @@ module.exports = {
             }
           }
         ]
-        // loader: "css-loader",
-        // options: {
-        //   modules: {
-        //     compileType: "module",
-        //     mode: "local",
-        //     auto: true,
-        //     exportGlobals: true,
-        //     localIdentName: "[path][name]__[local]--[hash:base64:5]",
-        //     localIdentContext: path.resolve(__dirname, "src/app"),
-        //     localIdentHashPrefix: "my-custom-hash",
-        //     namedExport: true,
-        //     exportLocalsConvention: "camelCase",
-        //     exportOnlyLocals: false
-        //   }
-        // }
       },
       {
         test: /\.s[ac]ss$/i,
@@ -89,6 +84,17 @@ module.exports = {
           //     }
           //   }
           // }
+        ]
+      },
+      {
+        test: /\.(mov|mp4)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]'
+            }  
+          }
         ]
       }
     ]
