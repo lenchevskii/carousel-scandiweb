@@ -1,36 +1,39 @@
-import React, { useState } from 'react'
+import React, { useReducer } from 'react'
 import styles from './carousel.scss'
 
-const Carousel = () => {
-  const sliderArray = [1, 2, 3, 4, 5]
-  const [x, setX] = useState(0)
-  const goLeft = () => {
-    console.log(x)
-    x === 0 ? setX(-100 * (sliderArray.length - 1)) : setX(x + 100)
-  }
+const sliderArray = [1, 2, 3, 4, 5]
 
-  const goRight = () => {
-    console.log(x)
-    x === -100 * (sliderArray.length - 1) ? setX(0) : setX(x - 100)
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'leftAction':
+      return state === 0 ? (-100 * (sliderArray.length - 1)) : (state + 100)
+    case 'rightAction':
+      return state === -100 * (sliderArray.length - 1) ? (0) : (state - 100)
+    default:
+      throw new Error()
   }
+}
+
+const Carousel = () => {
+  const [x, dispatch] = useReducer(reducer, 0)
 
   return (
     <div className={styles.container}>
       <div className={styles.slider}>
         {
-          sliderArray.map((x, index) => {
+          sliderArray.map((item, index) => {
             return (
               <div key={index}
                 className={styles.slide}
                 style={{ transform: `translateX(${x}%)` }}
               >
-                {x}
+                {item}
               </div>
             )
           })
         }
-        <button id={styles.goLeft} onClick={goLeft}>Left</button>
-        <button id={styles.goRight} onClick={goRight}>Right</button>
+        <button id={styles.goLeft} onClick={() => dispatch({type: 'leftAction'})}>Left</button>
+        <button id={styles.goRight} onClick={() => dispatch({type: 'rightAction'})}>Right</button>
       </div>
     </div>
   )
