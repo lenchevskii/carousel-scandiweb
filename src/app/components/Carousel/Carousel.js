@@ -2,7 +2,7 @@ import React, { useReducer } from 'react'
 import styles from './carousel.scss'
 import i1 from '../../static/pictures/1.png'
 import i2 from '../../static/pictures/2.jpg'
-import v1 from '../../static/videos/1.mp4'
+// import v1 from '../../static/videos/1.mp4'
 import { Image, Video } from 'components'
 
 const reducer = (state, action) => {
