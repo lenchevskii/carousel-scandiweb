@@ -1,16 +1,22 @@
+
+*... currenly in progress*
+
+---
+
 # Scandiweb Test Task (**[full text one's](https://github.com/lenchevskii/scanditask/blob/main/TASK.md)**)
 
   **Pipe:**
 
 - [x] Manually configure the environment (Webpack, React)
 - [ ] Create a carousel component:
-  - [ ] Mobile + Desktop
+  - [ ] Mobile
+  - [x] Desktop
   - [ ] Swipes
   - [x] Work with any HTML content
   - [x] Animated
   - [x] Multi-picture referenced post usage ability
 - [x] Demonstrate component in [action](https://lenchevskii.github.io/scanditask/)
-- [ ] Make the application' setup explanation
+- [x] Make the application' setup explanation
 
 **App usage:**
 
@@ -33,6 +39,8 @@ Run script to build a project via Webpack bundler:
   ```
 
 Because of using a bundler, the deploy environment has to have only JS engine and two packages to run the project.
+
+The build's stored at the `/bundle` directory.
 
 Simple application deploy was implement through the **GitHub Pages**.
 
