@@ -1,0 +1,8 @@
+@use '/src/app/basic-style/basic';
+
+.image {
+  @include basic.block_element;
+  // box-shadow: 20px #848484;
+  width: auto;
+  height: 100%;
+}

@@ -44,11 +44,15 @@ export default function Carousel() {
         <button id={styles.goLeft} onClick={() => dispatch({
           type: 'leftAction',
           collection: sliderArray
-        })}>Previous</button>
+        })}>
+          <i class="fa fa-space-shuttle fa-rotate-180" aria-hidden="true"></i>
+        </button>
         <button id={styles.goRight} onClick={() => dispatch({
           type: 'rightAction',
           collection: sliderArray
-        })}>Nexta</button>
+        })}>
+          <i class="fa fa-space-shuttle" aria-hidden="true"></i>
+        </button>
       </div>
     </div>
   )

@@ -1,12 +1,14 @@
 import React from 'react'
-import styles from './footer.css'
+import styles from './footer.scss'
 
-const Footer = () => (
-  <div className={styles.container}>
-      <p className={styles.content}>
-        Foot
-      </p>
-  </div>
-)
-
-export default Footer
+export default function Footer() {
+  return (
+    <div className={styles.container}>
+      <div className={styles.footer_panel}>
+          <p className={styles.content}>
+          Au revoir...
+          </p>
+      </div>
+    </div>
+  )
+}

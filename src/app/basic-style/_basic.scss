@@ -1,0 +1,15 @@
+@mixin block_element {
+  /* outline: 10pt solid black; */
+  border: 3pt solid #3f3f3f;
+  border-radius: 10pt;
+  box-sizing: border-box;
+  transition: 0.5s;
+  text-align: center;
+  background-color: white;
+}
+
+@mixin container_element {
+  margin: 15px;
+  border: 5px dashed rgb(168, 171, 209);
+  border-radius: 10pt;
+}

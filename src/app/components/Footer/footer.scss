@@ -1,0 +1,16 @@
+@use '/src/app/basic-style/basic';
+
+.footer_panel {
+  @include basic.block_element;
+}
+
+.container {
+  @include basic.container_element;
+}
+
+.content {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: larger;
+  text-align: center;
+}
