@@ -42,6 +42,6 @@ Simple application deploy was implement through the **GitHub Pages**.
 
 ---
 
-## *PS:*
+*PS:*
 
-### *I was inspired by [this](https://www.youtube.com/watch?v=Tdpq-9XYoNM) video. But the aimed component was rewritten by dint of `useReducer()` (instead of `useState()`), which allows troubleless working with complex logic inside the state.*
+*I was inspired by [this](https://www.youtube.com/watch?v=Tdpq-9XYoNM) video. But the aimed component was rewritten by dint of **`useReducer()`** (instead of **`useState()`**), which allows troubleless working with complex logic inside the state.*
