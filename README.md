@@ -14,7 +14,7 @@
   - [ ] Swipes
   - [x] Work with any HTML content
   - [x] Animated
-  - [x] Multi-picture referenced post usage ability
+  - [ ] Multi-picture referenced post usage ability
 - [x] Demonstrate component in [action](https://lenchevskii.github.io/scanditask/)
 - [x] Make the application' setup explanation
 
