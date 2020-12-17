@@ -1,5 +1,5 @@
 
-*... currenly in progress*
+*... currently in progress*
 
 ---
 
