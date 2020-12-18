@@ -1,14 +1,12 @@
 import React, { useReducer } from 'react'
 import styles from './carousel.scss'
 import i1 from '../../static/pictures/1.png'
-import i2 from '../../static/pictures/2.jpg'
 import v1 from '../../static/videos/1.mp4'
 import { Image, Video } from 'components'
 
 const reducer = (state, action) => {
   switch (action.type) {
     case 'leftAction':
-      console.log(state)
       return state === 0 ? (-100 * (action.collection.length - 1)) : (state + 100)
     case 'rightAction':
       return state === -100 * (action.collection.length - 1) ? (0) : (state - 100)
@@ -19,7 +17,6 @@ export default function Carousel() {
 
   const sliderArray = [
     <Image src={i1} />,
-    <Image src={i2} />,
     <Image src='https://scandiweb.com/assets/images/scandiweb_logo.png' />,
     <Video src={v1} />
   ]
@@ -45,13 +42,13 @@ export default function Carousel() {
           type: 'leftAction',
           collection: sliderArray
         })}>
-          <i class="fa fa-space-shuttle fa-rotate-180" aria-hidden="true"></i>
+          <i className="fa fa-space-shuttle fa-rotate-180" aria-hidden="true"></i>
         </button>
         <button id={styles.goRight} onClick={() => dispatch({
           type: 'rightAction',
           collection: sliderArray
         })}>
-          <i class="fa fa-space-shuttle" aria-hidden="true"></i>
+          <i className="fa fa-space-shuttle" aria-hidden="true"></i>
         </button>
       </div>
     </div>

@@ -1,6 +1,5 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-// const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const Webpack = require('webpack')
 
 module.exports = {
@@ -22,17 +21,23 @@ module.exports = {
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
-          'file-loader',
           {
-            loader: 'image-webpack-loader',
+            loader: 'file-loader',
             options: {
-              bypassOnDebug: true, // webpack@1.x
-              disable: true, // webpack@2.x and newer
-              webp: {
-                quality: 75
-              }
+              name: '[path][name].[ext]'
             }
-          }
+          },
+          // {
+          //   loader: 'image-webpack-loader',
+          //   options: {
+          //     name: '[path][name].[ext]',
+          //     bypassOnDebug: true, // webpack@1.x
+          //     disable: true, // webpack@2.x and newer
+          //     webp: {
+          //       quality: 75
+          //     }
+          //   }
+          // }
         ]
       },
       {
@@ -69,21 +74,6 @@ module.exports = {
           },
           // Compiles Sass to CSS
           "sass-loader",
-          // {
-          //   loader: "postcss-loader",
-          //   options: {
-          //     postcssOptions: {
-          //       plugins: [
-          //         [
-          //           "postcss-preset-env",
-          //           {
-          //             modules: true
-          //           }
-          //         ]
-          //       ]
-          //     }
-          //   }
-          // }
         ]
       },
       {
@@ -93,7 +83,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[path][name].[ext]'
-            }  
+            }
           }
         ]
       }
@@ -101,7 +91,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html'
+      template: './src/public/index.html'
     }),
     // new MiniCssExtractPlugin(),
     new Webpack.DefinePlugin({
