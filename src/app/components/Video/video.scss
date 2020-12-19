@@ -1,0 +1,13 @@
+@use '/src/app/basic-style/basic';
+
+.video {
+  @include basic.block_element;
+  
+  // transition: 0s;
+  background-color: black;
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

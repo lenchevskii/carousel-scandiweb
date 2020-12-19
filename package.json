@@ -23,8 +23,7 @@
     "url": "https://github.com/lenchevskii/scanditask/issues"
   },
   "homepage": "https://github.com/lenchevskii/scanditask#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
