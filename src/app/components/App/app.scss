@@ -1,0 +1,7 @@
+@import '/src/app/basic-style/basic';
+
+.container {
+  @include base_block;
+  background-color: thistle;
+  height: 100%;
+}

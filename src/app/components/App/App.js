@@ -1,5 +1,5 @@
 import { Header, Footer, Carousel } from 'components'
-import styles from './app.css'
+import styles from './app.scss'
 import React from 'react'
 
 const App = () => (

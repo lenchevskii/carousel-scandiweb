@@ -1,16 +1,14 @@
-@use '/src/app/basic-style/basic';
+@import '/src/app/basic-style/basic';
 
 .footer_panel {
-  @include basic.block_element;
+  @include base_block;
 }
 
 .container {
-  @include basic.container_element;
+  @include base_container;
+  bottom: 10px; // the block gravitates to the bottom
 }
 
 .content {
-  font-family: "Ubuntu";
-  font-weight: 700;
-  font-size: larger;
-  text-align: center;
+  @include base_content;
 }

@@ -1,5 +1,6 @@
-@mixin block_element {
-  /* outline: 10pt solid black; */
+$breakpoint-mobile: 400px;
+
+@mixin base_block {
   border: 3pt solid #3f3f3f;
   border-radius: 10pt;
   box-sizing: border-box;
@@ -8,8 +9,18 @@
   background-color: white;
 }
 
-@mixin container_element {
+@mixin base_container {
   margin: 15px;
   border: 5px dashed rgb(168, 171, 209);
   border-radius: 10pt;
+  position: absolute;
+  right: 10px;
+  left: 10px;
+}
+
+@mixin base_content {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: larger;
+  text-align: center;
 }
