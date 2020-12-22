@@ -2,9 +2,9 @@
   "name": "scanditask",
   "version": "1.0.0",
   "description": "Scandiweb test task",
-  "main": "/src/index.js",
+  "main": "/client/index.js",
   "scripts": {
-    "start": "webpack --mode production && webpack serve --config ./webpack.config.js --mode development",
+    "start": "rm -r bundle/ && webpack --mode production && webpack serve --config ./webpack.config.js --mode development",
     "build": "webpack --mode production"
   },
   "repository": {
@@ -13,6 +13,7 @@
   },
   "keywords": [
     "react",
+    "webpack",
     "task",
     "git"
   ],
@@ -22,19 +23,25 @@
     "url": "https://github.com/lenchevskii/scanditask/issues"
   },
   "homepage": "https://github.com/lenchevskii/scanditask#readme",
-  "dependencies": {},
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "graphql": "^15.4.0"
+  },
   "devDependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
     "@babel/core": "^7.12.10",
+    "@babel/plugin-syntax-top-level-await": "^7.12.1",
     "@babel/preset-env": "^7.12.10",
     "@babel/preset-react": "^7.12.10",
     "babel-loader": "^8.2.2",
-    "babel-plugin-module-resolver": "4.0.0",
+    "babel-plugin-module-resolver": "^4.1.0",
     "css-loader": "^5.0.1",
     "eslint": "^7.15.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.0.0-alpha.3",
+    "node-fetch": "^2.6.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "sass": "^1.30.0",
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",

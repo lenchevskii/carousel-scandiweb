@@ -6,7 +6,8 @@ export default function Video({ src }) {
     <video controls
       className={styles.video}
       tabIndex='-1'>
-      <source src={src} type='video/mp4'></source>
+      <source src={src}></source>
+      {/* <source src={src} type='video/mp4'></source> */}
     </video>
   )
 }

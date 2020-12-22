@@ -9,7 +9,7 @@
 
 - [x] Manually configure the environment (Webpack, React)
 - [ ] Create a carousel component:
-  - [ ] Mobile
+  - [x] Mobile
   - [x] Desktop
   - [ ] Swipes
   - [x] Work with any HTML content

@@ -3,10 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const Webpack = require('webpack')
 
 module.exports = {
-  entry: '/src/index.js',
+  entry: {
+    client: '/client/index.js'
+  },
   output: {
     path: path.join(__dirname, '/bundle'),
-    filename: 'index_bundle.js'
+    filename: '[name].[contenthash].js'
   },
   devServer: {
     inline: true,
@@ -26,7 +28,7 @@ module.exports = {
             options: {
               name: '[path][name].[ext]'
             }
-          },
+          }
           // {
           //   loader: 'image-webpack-loader',
           //   options: {
@@ -91,9 +93,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/public/index.html'
+      template: './client/public/index.html'
     }),
-    // new MiniCssExtractPlugin(),
     new Webpack.DefinePlugin({
       '__REACT_DEVTOOLS_GLOBAL_HOOK__': '({ isDisabled: true })'
     })
@@ -101,5 +102,8 @@ module.exports = {
   performance: {
     maxEntrypointSize: 5120000,
     maxAssetSize: 5120000
+  },
+  experiments: {
+    topLevelAwait: true
   }
 }
