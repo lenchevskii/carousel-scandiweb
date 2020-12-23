@@ -1,19 +1,22 @@
-const { getCollection } = require('./utils/instagram-util')
-const bodyparser = require('body-parser')
+const { getInstagramCollection } = require('./utils/instagram-util')
+
 const express = require('express')
 
 const app = express()
 
 const PORT = 3001
 
-// app.use(bodyparser.json())
+app.get(`/`, async (req, res) => {
 
-const link = "https://www.instagram.com/p/B_xfntNJleV/?__a=1"
+  // const collection = await getInstagramCollection("https://www.instagram.com/p/B_xfntNJleV/?__a=1")
 
-app.get(`/`, (req, res) => {
-  getCollection(link)
+  // console.log(collection)
+
+  console.log('fire')
+
+  // res.send(collection.graphql.shortcode_media.edge_sidecar_to_children)
 })
 
 app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`)
+  console.log(`Instagram utility server listening on port ${PORT}`)
 })

@@ -1,12 +1,12 @@
-const { response } = require('express')
-const fetch = require('node-fetch')
-const { parse } = require('graphql')
+const { template, pattern, fnc }  = require('./targets/instagram')
 
-const getCollection = async (url) => (
-  await fetch(url)
-    .then(response => response.json())
-    .then(x => console.log(x))
-    .catch(error => console.error(error))
-)
+const { compose, curry }          = require('lodash/fp')
 
-module.exports = { getCollection }
+const { fetchJson }               = require('./handlers/action-api')
+
+const formatInstagramUrl          = curry(fnc)(template, pattern)
+
+const getInstagramCollection      = compose(fetchJson, formatInstagramUrl)
+
+
+module.exports = { getInstagramCollection }
