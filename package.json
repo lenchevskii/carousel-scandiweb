@@ -6,7 +6,7 @@
   "scripts": {
     "devClient": "rm -r bundle/ && webpack --mode production && webpack serve --config ./webpack.config.js --mode development",
     "build": "webpack --mode production",
-    "devServer": "nodemon server/index.js --config nodemon.json",
+    "devServer": "nodemon server/index.js",
     "test": "jest"
   },
   "repository": {
@@ -54,6 +54,6 @@
     "webpack-dev-server": "^3.11.0"
   },
   "nodemonConfig": {
-    "ignore": ["tests/*", "docs/*"]
+    "ignore": ["tests/*"]
   }
 }

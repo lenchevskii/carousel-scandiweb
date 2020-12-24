@@ -4,7 +4,6 @@ import i1 from '../../static/pictures/external-content_440x440.png'
 import i2 from '../../static/pictures/external-content_1920x1080.png'
 import v1 from '../../static/videos/1.mp4'
 import { Image, Video } from 'components'
-// import { getCollection } from 'util'
 
 const reducer = (state, action) => {
   switch (action.type) {

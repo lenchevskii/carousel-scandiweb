@@ -1,4 +1,4 @@
-const { getInstagramCollection }  = require('./utils/instagram-worm')
+const { getInstagramCollection }  = require('./utils/instagram.worm')
 
 const { PORT }                    = require('dotenv').config().parsed
 
@@ -8,15 +8,14 @@ const app                         = express()
 
 const today                       = new Date()
 
-const moon_url                    = require('./tests/instagram-worm.test')
+const moon_url                    = "https://www.instagram.com/p/B_xfntNJleV/?__a=1"
 
-app.get(`/instagram-worm`, async (req, res) => {
+app.get(`/instagram.worm`, async (req, res) => {
+  console.log(req.headers)
 
   const collection = await getInstagramCollection(moon_url)
 
-  // console.log(collection)
   res.send(collection)
-  // res.send(collection.graphql.shortcode_media.edge_sidecar_to_children)
 })
 
 app.listen(PORT, () => {
