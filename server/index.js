@@ -1,22 +1,24 @@
-const { getInstagramCollection } = require('./utils/instagram-util')
+const { getInstagramCollection }  = require('./utils/instagram-worm')
 
-const express = require('express')
+const { PORT }                    = require('dotenv').config().parsed
 
-const app = express()
+const express                     = require('express')
 
-const PORT = 3001
+const app                         = express()
 
-app.get(`/`, async (req, res) => {
+const today                       = new Date()
 
-  // const collection = await getInstagramCollection("https://www.instagram.com/p/B_xfntNJleV/?__a=1")
+const moon_url                    = require('./tests/instagram-worm.test')
+
+app.get(`/instagram-worm`, async (req, res) => {
+
+  const collection = await getInstagramCollection(moon_url)
 
   // console.log(collection)
-
-  console.log('fire')
-
+  res.send(collection)
   // res.send(collection.graphql.shortcode_media.edge_sidecar_to_children)
 })
 
 app.listen(PORT, () => {
-  console.log(`Instagram utility server listening on port ${PORT}`)
+  console.log(`Server listening on port ${PORT}. Server time: ${today.toLocaleString()}`)
 })
