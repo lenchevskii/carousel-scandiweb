@@ -53,6 +53,8 @@ const realEngineer 								= [
 
 const realNewbieSurprise					= []
 
+const realLego										= []
+
 it(`Instagram. Steal Saturn's icy moon Mimas (multi-image post).  URL: ${multipleImageUrl}`, 		async () => {
 
 	const stolenMoon = await getInstagramCollection(multipleImageUrl)
@@ -74,11 +76,11 @@ it(`Instagram. Steal newbie' surprises (video & image post).      URL: ${videoIm
 	expect(stolenNewbieSurprise.map(x => trimToken(x.src))).toEqual(realNewbieSurprise.map(x => trimToken(x.src)))
 })
 
-it(`Instagram. Steal lego from boy (single video post).           URL: ${singleVideoUrl}`, 			async () => {
+it(`Instagram. Steal Lego from a boy (single video post).         URL: ${singleVideoUrl}`, 			async () => {
 	
-	const stolenNewbieSurprise = await getInstagramCollection(videoImageMixedUrl)
+	const stolenLego = await getInstagramCollection(singleVideoUrl)
 
-	expect(stolenNewbieSurprise.map(x => trimToken(x.src))).toEqual(realNewbieSurprise.map(x => trimToken(x.src)))
+	expect(stolenLego.map(x => trimToken(x.src))).toEqual(realLego.map(x => trimToken(x.src)))
 })
 
 
