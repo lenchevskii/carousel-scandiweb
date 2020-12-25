@@ -4,9 +4,13 @@ const { head } 										= require('lodash/fp')
 
 const { PORT }										= require('dotenv').config().parsed
 
-const multiplePhotoUrl 						= "https://www.instagram.com/p/B_xfntNJleV/"
+const multipleImageUrl 						= "https://www.instagram.com/p/B_xfntNJleV/"
 
-const singlePhotoUrl 							= "https://www.instagram.com/p/Bo8e6FsgLlK/?__a=1"
+const singleImageUrl 							= "https://www.instagram.com/p/Bo8e6FsgLlK/"
+
+const videoImageMixedUrl					= "https://www.instagram.com/p/CGDADokpb1X/"
+
+const singleVideoUrl							= "https://www.instagram.com/p/CIoa4oWFISU/"
 
 const localhost 									= `https://localhost:${PORT}/instagram-worm`
 
@@ -47,23 +51,39 @@ const realEngineer 								= [
 	}
 ]
 
-it("Instagram. Steal Saturn's icy moon Mimas (multiphoto URL):", async () => {
+const realNewbieSurprise					= []
 
-	const fetchedMoon = await getInstagramCollection(multiplePhotoUrl)
+it(`Instagram. Steal Saturn's icy moon Mimas (multi-image post).  URL: ${multipleImageUrl}`, 		async () => {
 
-	expect(fetchedMoon.map(x => trimToken(x.src))).toEqual(realMoon.map(x => trimToken(x.src)))
+	const stolenMoon = await getInstagramCollection(multipleImageUrl)
+
+	expect(stolenMoon.map(x => trimToken(x.src))).toEqual(realMoon.map(x => trimToken(x.src)))
 })
 
-it("Instagram. Steal Scandiweb engineer (single photo URL):", async () => {
+it(`Instagram. Steal Scandiweb engineer (single image post).      URL: ${singleImageUrl}`, 			async () => {
 	
-	const fetchedEngineer = await getInstagramCollection(singlePhotoUrl)
+	const stolenEngineer = await getInstagramCollection(singleImageUrl)
 
-	expect(fetchedEngineer).toEqual(realEngineer)
+	expect(stolenEngineer.map(x => trimToken(x.src))).toEqual(realEngineer.map(x => trimToken(x.src)))
+})
+
+it(`Instagram. Steal newbie' surprises (video & image post).      URL: ${videoImageMixedUrl}`, 	async () => {
+	
+	const stolenNewbieSurprise = await getInstagramCollection(videoImageMixedUrl)
+
+	expect(stolenNewbieSurprise.map(x => trimToken(x.src))).toEqual(realNewbieSurprise.map(x => trimToken(x.src)))
+})
+
+it(`Instagram. Steal lego from boy (single video post).           URL: ${singleVideoUrl}`, 			async () => {
+	
+	const stolenNewbieSurprise = await getInstagramCollection(videoImageMixedUrl)
+
+	expect(stolenNewbieSurprise.map(x => trimToken(x.src))).toEqual(realNewbieSurprise.map(x => trimToken(x.src)))
 })
 
 
 // HELPERS
 
-// Trim Instagram generated tokens from URL when the access was recieved
+// Trim time-dependent generated tokens (or whatever) from URL when the access was recieved
 
-const trimToken = (url) => head(url.match(/.*(_n\.jpg\?)/))
+const trimToken 									= (url) => head(url.match(/.*(_n\.jpg\?)/))

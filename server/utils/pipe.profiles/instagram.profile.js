@@ -1,15 +1,10 @@
-module.exports = {
-  
-  template: "https://www.instagram.com/p/{pointer}/?__a=1",
-  pattern: /(https:\/\/www.instagram.com\/p\/)([^\/.]*)(\/?.*)/,
+const { tail, head }  = require("lodash/fp")
 
-  fnc: (template, pattern, url) => {
-    const postPointer = url.match(pattern)[2]
+const template        = "https://www.instagram.com/p/{pointer}/?__a=1"
 
-    return template.replace('{pointer}',
-      postPointer === []
-        ? new Error('Instagram link has no appropriate structure.')
-        : postPointer
-    )
-  }
-}
+const pattern         = /(https:\/\/www.instagram.com\/p\/)([^\/.]*)(\/?.*)/
+
+const fnc             = (template, pattern, url) => template.replace('{pointer}', head(tail(tail(url.match(pattern)))))
+
+
+module.exports        = { template, pattern, fnc }

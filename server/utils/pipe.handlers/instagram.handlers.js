@@ -1,4 +1,4 @@
-const { last, hasIn }             = require('lodash/fp')
+const { last }                    = require('lodash/fp')
 
 const fetch                       = require('node-fetch')
 
@@ -9,8 +9,8 @@ const extractMedia                = async (collection)  => await collection.then
 const extractDisplayResources     = async (collection)  => await collection.then(x => x.edge_sidecar_to_children != undefined
 
                                           ? x.edge_sidecar_to_children.edges.map(y => last(y.node.display_resources))
-                                          : [last(x.display_resources)]
+                                          : Array(last(x.display_resources))
                                         )
 
 
-module.exports = { fetchJson, extractMedia, extractDisplayResources }
+module.exports                    = { fetchJson, extractMedia, extractDisplayResources }
