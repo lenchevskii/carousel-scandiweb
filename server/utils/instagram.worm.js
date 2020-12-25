@@ -3,11 +3,14 @@ const { extractDisplayResources
       , fetchJson
       }                           = require('./pipe.handlers/instagram.handlers')
 
-const { template, pattern, fnc }  = require('./pipe.profiles/instagram.profile')
+const { template
+			, pattern
+			, resolveUrl
+			}														= require('./pipe.profiles/instagram.profile')
 
 const { compose, curry }          = require('lodash/fp')
 
-const resolveInstagramUrl         = curry(fnc)(template, pattern)
+const resolveInstagramUrl         = curry(resolveUrl)(template, pattern)
 
 const getInstagramCollection      = compose(extractDisplayResources, extractMedia, fetchJson, resolveInstagramUrl)
 

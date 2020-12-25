@@ -69,19 +69,19 @@ it(`Instagram. Steal Scandiweb engineer (single image post).      URL: ${singleI
 	expect(stolenEngineer.map(x => trimToken(x.src))).toEqual(realEngineer.map(x => trimToken(x.src)))
 })
 
-it(`Instagram. Steal newbie' surprises (video & image post).      URL: ${videoImageMixedUrl}`, 	async () => {
+// it(`Instagram. Steal newbie' surprises (video & image post).      URL: ${videoImageMixedUrl}`, 	async () => {
 	
-	const stolenNewbieSurprise = await getInstagramCollection(videoImageMixedUrl)
+// 	const stolenNewbieSurprise = await getInstagramCollection(videoImageMixedUrl)
 
-	expect(stolenNewbieSurprise.map(x => trimToken(x.src))).toEqual(realNewbieSurprise.map(x => trimToken(x.src)))
-})
+// 	expect(stolenNewbieSurprise.map(x => trimToken(x.src))).toEqual(realNewbieSurprise.map(x => trimToken(x.src)))
+// })
 
-it(`Instagram. Steal Lego from a boy (single video post).         URL: ${singleVideoUrl}`, 			async () => {
+// it(`Instagram. Steal Lego from a boy (single video post).         URL: ${singleVideoUrl}`, 			async () => {
 	
-	const stolenLego = await getInstagramCollection(singleVideoUrl)
+// 	const stolenLego = await getInstagramCollection(singleVideoUrl)
 
-	expect(stolenLego.map(x => trimToken(x.src))).toEqual(realLego.map(x => trimToken(x.src)))
-})
+// 	expect(stolenLego.map(x => trimToken(x.src))).toEqual(realLego.map(x => trimToken(x.src)))
+// })
 
 
 // HELPERS
