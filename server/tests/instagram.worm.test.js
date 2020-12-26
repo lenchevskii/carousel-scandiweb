@@ -50,7 +50,7 @@ const realEngineer                  = [
                                         }
                                       ]
 
-const realNewbieSurprise            = []
+const realSurprise                  = []
 
 const realLego                      = []
 
@@ -72,10 +72,10 @@ it(`Instagram. Steal Scandiweb engineer (single image post).      URL: ${singleI
 
 it(`Instagram. Steal newbie' surprises (video & image post).      URL: ${videoImageUrl}`,       async () => {
 	
-  const stolenNewbieSurprise        = await getInstagramCollection(videoImageUrl)
+  const stolenSurprise              = await getInstagramCollection(videoImageUrl)
 
-  expect(stolenNewbieSurprise.map(x => trimToken(x.src)))
-  .toEqual(realNewbieSurprise.map(x => trimToken(x.src)))
+  expect(stolenSurprise.map(x => trimToken(x.src)))
+  .toEqual(realSurprise.map(x => trimToken(x.src)))
 })
 
 it(`Instagram. Steal Lego from a boy (single video post).         URL: ${singleVideoUrl}`,      async () => {
