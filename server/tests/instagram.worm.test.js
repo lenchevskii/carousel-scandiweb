@@ -8,9 +8,9 @@ const multipleImageUrl              = "https://www.instagram.com/p/B_xfntNJleV/"
 
 const singleImageUrl                = "https://www.instagram.com/p/Bo8e6FsgLlK/"
 
-const videoImageMixedUrl            = "https://www.instagram.com/p/CGDADokpb1X/"
-
 const singleVideoUrl                = "https://www.instagram.com/p/CIoa4oWFISU/"
+
+const videoImageUrl                 = "https://www.instagram.com/p/CGDADokpb1X/"
 
 const localhost                     = `https://localhost:${PORT}/instagram-worm`
 
@@ -70,9 +70,9 @@ it(`Instagram. Steal Scandiweb engineer (single image post).      URL: ${singleI
   .toEqual(realEngineer.map(x => trimToken(x.src)))
 })
 
-it(`Instagram. Steal newbie' surprises (video & image post).      URL: ${videoImageMixedUrl}`,  async () => {
+it(`Instagram. Steal newbie' surprises (video & image post).      URL: ${videoImageUrl}`,       async () => {
 	
-  const stolenNewbieSurprise        = await getInstagramCollection(videoImageMixedUrl)
+  const stolenNewbieSurprise        = await getInstagramCollection(videoImageUrl)
 
   expect(stolenNewbieSurprise.map(x => trimToken(x.src)))
   .toEqual(realNewbieSurprise.map(x => trimToken(x.src)))
