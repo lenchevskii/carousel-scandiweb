@@ -1,4 +1,3 @@
-
 *... currently in progress*
 
 ---
@@ -11,10 +10,12 @@
 - [ ] Create a carousel component:
   - [x] Mobile
   - [x] Desktop
-  - [ ] Swipes
+  - [x] Swipes
+    - [x] Desktop infinite option
+    - [ ] Mobile infinite option
   - [x] Work with any HTML content
   - [x] Animated
-  - [ ] Multi-picture referenced post usage ability
+- [ ] Multi-picture referenced post usage ability
 - [x] Demonstrate component in [action](https://lenchevskii.github.io/scanditask/)
 - [x] Make the application' setup explanation
 
@@ -38,11 +39,11 @@ Run script to build a project via Webpack bundler:
   npm run build
   ```
 
-Because of using a bundler, the deploy environment has to have only JS engine and two packages to run the project.
+Because of using a bundler, the client deploy environment has to have only JS engine to run the project.
 
-The build's stored at the `/bundle` directory.
+The client build's stored at the `/bundle` directory.
 
-Simple application deploy was implement through the **GitHub Pages**.
+Simple client deploy was implement through the **GitHub Pages**.
 
 ---
 
@@ -52,4 +53,4 @@ Simple application deploy was implement through the **GitHub Pages**.
 
 *PS:*
 
-*I was inspired by [this](https://www.youtube.com/watch?v=Tdpq-9XYoNM) video. But the aimed component was rewritten by dint of **`useReducer()`** (instead of **`useState()`**), which allows troubleless working with complex logic inside the state.*
+*Client side was inspired by [this](https://www.youtube.com/watch?v=Tdpq-9XYoNM) video. The aimed component was rewritten by dint of **`useReducer()`** (instead of **`useState()`**), which allows troubleless working with complex logic inside the state.*
