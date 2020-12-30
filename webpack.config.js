@@ -1,6 +1,7 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const Webpack = require('webpack')
+const HtmlPlugin  = require('html-webpack-plugin')
+const copyPlugin  = require('copy-webpack-plugin')
+const webpack     = require('webpack')
+const path        = require('path')
 
 module.exports = {
   entry: {
@@ -92,17 +93,25 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
+    new HtmlPlugin({
       template: './client/public/index.html'
     }),
-    new Webpack.DefinePlugin({
+    new webpack.DefinePlugin({
       '__REACT_DEVTOOLS_GLOBAL_HOOK__': '({ isDisabled: true })'
+    }),
+    new copyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'client/public/favicon.png'),
+          to: path.resolve(__dirname, 'bundle/favicon.png')
+        }
+      ]
     })
-  ],
-  performance: {
-    maxEntrypointSize: 5120000,
-    maxAssetSize: 5120000
-  }
+  ]
+  // performance: {
+  //   maxEntrypointSize: 5120000,
+  //   maxAssetSize: 5120000
+  // }
   // experiments: {
   //   topLevelAwait: true
   // }
