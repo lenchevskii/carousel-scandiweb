@@ -1,0 +1,24 @@
+@import '/client/app/basic-style/basic';
+
+.content {
+  @include base_content;
+}
+
+.text {
+  @include              base_block;
+  margin-right:         20%;
+  margin-left:          20%;
+  text-indent:          15px;
+  overflow-y:           scroll;
+  text-align:           justify;
+  padding:              1%;
+  height:               100%;
+
+  @media (max-width: $breakpoint-mobile) {
+    width:              80%;
+    height:             45vh;
+    margin:             10%;
+    padding-right:      3%;
+    border:             3px solid #e778785b;
+  }
+}

@@ -13,8 +13,7 @@
 }
 
 .btn_styles {
-  transform:            translateY(-50%);
-  transition:           0.3s;
+  @include              base_button;
   background:         rebeccapurple;
   font-size:            inherit;
   // position:             absolute;

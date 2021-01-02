@@ -1,9 +1,9 @@
+import { Image, Video, Text } from 'components'
 import React, { useReducer } from 'react'
-import { Image, Video } from 'components'
 import styles from './carousel.scss'
 import i1 from '../../static/pictures/external-content_440x440.png'
 import i2 from '../../static/pictures/external-content_1920x1080.png'
-import v1 from '../../static/videos/1.mp4'
+import v1 from '../../static/videos/external-content.mp4'
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -17,6 +17,7 @@ const reducer = (state, action) => {
 export default function Carousel() {
 
   const sliderArray = [
+    <Text />,
     <Image src={i1} />,
     <Image src={i2} />,
     <Image src='https://scandiweb.com/assets/images/scandiweb_logo.png' />,

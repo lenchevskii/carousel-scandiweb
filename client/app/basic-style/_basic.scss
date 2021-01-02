@@ -23,4 +23,16 @@ $breakpoint-mobile: 400px;
   font-weight:        700;
   text-align:         center;
   font-size:          larger;
+  color:            #3f3f3f;
+}
+
+@mixin base_button {
+  transform:            translateY(-50%);
+  transition:           0.3s;
+  background:           none;
+
+  &:hover {
+    opacity:            0.5;
+    cursor:             url('../../../public/pointer-select-24.png') 2 2, pointer;
+  }
 }
