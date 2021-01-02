@@ -1,26 +1,26 @@
 $breakpoint-mobile: 400px;
 
 @mixin base_block {
-  border: 3pt solid #3f3f3f;
-  border-radius: 10pt;
-  box-sizing: border-box;
-  transition: 0.5s;
-  text-align: center;
-  background-color: white;
+  background-color:   white;
+  border-radius:      10pt;
+  transition:         0.5s;
+  box-sizing:         border-box;
+  text-align:         center;
+  border:             3pt solid #3f3f3f;
 }
 
 @mixin base_container {
-  margin: 15px;
-  border: 5px dashed rgb(168, 171, 209);
-  border-radius: 10pt;
-  position: absolute;
-  right: 10px;
-  left: 10px;
+  border-radius:      10pt;
+  position:           absolute;
+  border:             5px dashed rgb(168, 171, 209);
+  margin:             15px;
+  right:              10px;
+  left:               10px;
 }
 
 @mixin base_content {
-  font-family: "Ubuntu";
-  font-weight: 700;
-  font-size: larger;
-  text-align: center;
+  font-family:        "Ubuntu";
+  font-weight:        700;
+  text-align:         center;
+  font-size:          larger;
 }

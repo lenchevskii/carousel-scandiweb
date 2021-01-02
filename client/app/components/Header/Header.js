@@ -4,9 +4,11 @@ import styles from './header.scss'
 const Header = () => (
   <div className={styles.container}>
     <div className={styles.header_panel}>
-      <p className={styles.content}>
+      <button className={styles.btn_styles}>
+        <p className={styles.content}>
           Bonjour
-      </p>
+        </p>
+      </button>
     </div>
   </div>
 )

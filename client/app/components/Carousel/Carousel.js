@@ -40,23 +40,17 @@ export default function Carousel() {
             )
           })
         }
-        <button id={styles.goLeft}
-          onClick={() => dispatch({
-            type: 'leftAction',
-            collection: sliderArray
-          })}
-          tabIndex='-1'
+        <button
+          id={styles.goLeft}
+          onClick={() => dispatch({ type: 'leftAction', collection: sliderArray })}
         >
-          <i className="fa fa-space-shuttle fa-rotate-180" aria-hidden="true"></i>
+          <i className="fa fa-space-shuttle fa-rotate-180"></i>
         </button>
-        <button id={styles.goRight}
-          onClick={() => dispatch({
-            type: 'rightAction',
-            collection: sliderArray
-          })}
-          tabIndex='-1'
+        <button
+          id={styles.goRight}
+          onClick={() => dispatch({ type: 'rightAction', collection: sliderArray })}
         >
-          <i className="fa fa-space-shuttle" aria-hidden="true"></i>
+          <i className="fa fa-space-shuttle"></i>
         </button>
       </div>
     </div>
