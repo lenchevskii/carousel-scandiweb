@@ -1,9 +1,9 @@
 import React, { useEffect, useReducer } from 'react'
 import { Image, Video, Text }           from 'components'
 import styles                           from './carousel.scss'
-import i1                               from '../../static/pictures/external-content_440x440.png'
-import i2                               from '../../static/pictures/external-content_1920x1080.png'
-import v1                               from '../../static/videos/external-content.mp4'
+import img_440x440                      from '../../static/pictures/external-content_440x440.png'
+import img_1920x1080                    from '../../static/pictures/external-content_1920x1080.png'
+import video                            from '../../static/videos/external-content.mp4'
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -16,11 +16,11 @@ const reducer = (state, action) => {
 
 export default function Carousel() {
 
-  const sliderArray   = [ <Image src={i1} />
+  const sliderArray   = [ <Image src={img_440x440} />
                         , <Text />
-                        , <Image src={i2} />
+                        , <Image src={img_1920x1080} />
                         , <Image src='https://scandiweb.com/assets/images/scandiweb_logo.png' />
-                        , <Video src={v1} />
+                        , <Video src={video} />
                         ]
 
   const [x, dispatch] = useReducer(reducer, 0)
@@ -34,8 +34,6 @@ export default function Carousel() {
                                 ? dispatch(left) : undefined
 
   useEffect(() => (addEventListener('keyup', onKeyUp)), [])
-
-  useEffect(() => (addEventListener('touchmove', (e) => console.log(e))))
 
   return (
     <div className={styles.container}>

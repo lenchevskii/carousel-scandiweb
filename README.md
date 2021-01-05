@@ -4,18 +4,21 @@
 
 # Scandiweb Test Task (**[full text one's](https://github.com/lenchevskii/scanditask/blob/main/TASK.md)**)
 
-  **Pipe:**
+  **ToDo:**
 
 - [x] Manually configure the environment (Webpack, React)
-- [ ] Create a carousel component:
+- [x] Create a carousel component:
   - [x] Mobile
   - [x] Desktop
+    - [x] Keyboard accessibility (additional option)
   - [x] Swipes
     - [x] Desktop infinite option
     - [ ] Mobile infinite option
   - [x] Work with any HTML content
   - [x] Animated
 - [ ] Multi-picture referenced post usage ability
+  - [x] Server side
+  - [ ] Client side
 - [x] Demonstrate component in [action](https://lenchevskii.github.io/scanditask/)
 - [x] Make the application' setup explanation
 
