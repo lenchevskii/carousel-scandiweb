@@ -1,15 +1,13 @@
 @import '/client/app/basic-style/basic';
 
 .video {
-  @include base_block;
-  background-color: black;
-  width: 40%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  @media (max-width: $breakpoint-mobile) {
-    width: 80%;
-  }
+  @include              base_block;
+  @include              base_breakpoint_width;
+  background-color:     black;
+  width:                40%;
+  position:             absolute;
+  top:                  50%;
+  left:                 50%;
+  transform:            translate(-50%, -50%);
+  box-shadow:           5px 5px 5px #999;
 }

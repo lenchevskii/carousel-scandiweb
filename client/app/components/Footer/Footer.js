@@ -1,14 +1,15 @@
-import React from 'react'
-import styles from './footer.scss'
+import { Button }                       from 'components'
+import styles                           from './footer.scss'
+import React                            from 'react'
 
-export default function Footer() {
-  return (
-    <div className={styles.container}>
-      <div className={styles.footer_panel}>
-          <p className={styles.content}>
-          Au revoir...
-          </p>
-      </div>
-    </div>
-  )
-}
+const Footer = () => (
+  <div className={styles.container}>
+    <Button style={styles.btn_jump}
+            text='Jump to the specific slide'
+            writing={styles.content}
+            badge={"fa-chevron-circle-right"}
+    />
+  </div>
+)
+
+export default Footer

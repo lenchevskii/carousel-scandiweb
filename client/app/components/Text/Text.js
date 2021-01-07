@@ -1,11 +1,12 @@
-import React from 'react'
-import styles from './text.scss'
+import React                            from 'react'
+import styles                           from './text.scss'
 
 export default function Text({ src }) {
   return (
     <div className={styles.content}>
       <section className={styles.text}>
         <h3>Lorem</h3>
+        
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id varius tortor. Donec viverra magna quam, eu elementum tellus ultrices et. Duis ullamcorper venenatis diam, sed vehicula justo egestas non. Duis consectetur metus at nunc fringilla faucibus. Nullam ornare quis quam in interdum. Praesent eu ultrices magna, vel varius erat. In libero lectus, fermentum ac mollis sit amet, posuere sit amet enim. Donec ullamcorper eros sit amet quam laoreet, ut malesuada elit vehicula. Donec at malesuada lectus. Suspendisse lacinia nisi non lectus molestie rutrum. Nulla id fringilla orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mauris quam, tristique sit amet dictum in, consectetur in quam. Pellentesque placerat, mauris quis volutpat dapibus, nisl orci condimentum nibh, et lobortis lectus quam non diam.</p>
 
         <p>Aliquam a faucibus nunc. Nam semper urna ultricies leo aliquet luctus. Ut vehicula libero vitae ante dignissim tristique. Aenean bibendum, elit interdum aliquet gravida, lectus ex pellentesque nulla, quis feugiat nisl sem id lectus. Ut id turpis leo. Aenean egestas condimentum turpis quis lobortis. Mauris id mattis eros, eget faucibus urna. Vivamus augue lectus, eleifend quis suscipit maximus, facilisis ac ipsum. Mauris neque tortor, maximus et nulla tempus, suscipit porttitor tellus. Etiam suscipit dapibus orci sed auctor.</p>

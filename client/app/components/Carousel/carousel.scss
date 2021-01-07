@@ -9,8 +9,6 @@
   height:               100%;
 
   @media (max-width: $breakpoint-mobile) {
-    @include            base_block;
-    background-color:   rgba($color: #090cd1, $alpha: 0.1);
     scroll-snap-type:   x mandatory;                              // for one swipe action necesserly
     overflow-x:         scroll;                                   // for swipe necessarly
   }
@@ -22,24 +20,24 @@
   height:               90%;
 
   @media (max-width: $breakpoint-mobile) {
-    height:             auto;
     scroll-snap-align:  start;                                    // for one swipe action necesserly
     scroll-snap-type:   x proximity;                              // for smooth swipe action necesserly
+    height:             auto;
   }
 }
 
-%spaceship-btn {
+%btn_style {
   @include              base_button;
+  transform:            translateY(-50%);
   font-size:            40pt;
   position:             absolute;
-  border:               none;
   height:               40%;
   width:                10%;
   top:                  50%;
 }
 
-#goLeft {
-  @extend               %spaceship-btn;
+.btn_left_jet {
+  @extend               %btn_style;
   left:                 0;
   margin-left:          30px;
 
@@ -48,8 +46,8 @@
   }
 }
 
-#goRight {
-  @extend               %spaceship-btn;
+.btn_right_jet {
+  @extend               %btn_style;
   right:                0;
   margin-right:         30px;
 
@@ -62,6 +60,7 @@
   @include              base_container;
   bottom:               100px;
   top:                  100px;
+  padding:              10px;
 
   @media (max-width: $breakpoint-mobile) {
     button {

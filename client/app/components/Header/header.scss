@@ -1,34 +1,28 @@
 @import '/client/app/basic-style/basic';
 
-.header_panel {
-  @include base_block;
-}
-
 .container {
-  @include base_container;
+  @include              base_container;
+  display:              flex;
 }
 
 .content {
-  @include base_content;
+  @include              base_content;
+  text-indent:          5px;
 }
 
-.btn_styles {
+%btn_style {
   @include              base_button;
-  background:         rebeccapurple;
-  font-size:            inherit;
-  // position:             absolute;
-  // border:               inherit;
-  display: contents;
-  // top: 15px;
-  // margin: inherit;
-  // border-radius: inherit;
-  // max-height:               100%;
-  // width:                100%;
-  // top:                  50%;
-  // left: 0;
+  @include              base_button_menu;
+  position:             absolute;
+  width:                48.5%;
+}
 
-  &:hover {
-    opacity:            0.5;
-    cursor:             url('../../../public/pointer-select-24.png') 2 2, pointer;
-  }
+.btn_remove {
+  @extend               %btn_style;
+  right:                0;
+}
+
+.btn_add {
+  @extend               %btn_style;
+  left:                 0;
 }

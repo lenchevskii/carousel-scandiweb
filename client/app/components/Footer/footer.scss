@@ -1,14 +1,20 @@
 @import '/client/app/basic-style/basic';
 
-.footer_panel {
-  @include base_block;
-}
-
 .container {
-  @include base_container;
-  bottom: 10px; // the block gravitates to the bottom
+  @include              base_container;
+  bottom:               10px;
 }
 
 .content {
-  @include base_content;
+  @include              base_content;
+}
+
+%btn_style {
+  @include              base_button;
+  @include              base_button_menu;
+  width:                100%;
+}
+
+.btn_jump {
+  @extend               %btn_style;
 }

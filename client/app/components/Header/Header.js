@@ -1,15 +1,19 @@
-import React from 'react'
-import styles from './header.scss'
+import { Button }                       from 'components'
+import React                            from 'react'
+import styles                           from './header.scss'
 
 const Header = () => (
   <div className={styles.container}>
-    <div className={styles.header_panel}>
-      <button className={styles.btn_styles}>
-        <p className={styles.content}>
-          Bonjour
-        </p>
-      </button>
-    </div>
+    <Button style={styles.btn_add}
+            text='Add post or file URL'
+            writing={styles.content}
+            badge={"fa-instagram"}
+    />
+    <Button style={styles.btn_remove}
+            text='Remove last element'
+            writing={styles.content}
+            badge={"fa-minus-square"}
+    />
   </div>
 )
 

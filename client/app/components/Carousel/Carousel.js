@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer } from 'react'
-import { Image, Video, Text }           from 'components'
+import { Image, Video, Text, Button }   from 'components'
 import styles                           from './carousel.scss'
 import img_440x440                      from '../../static/pictures/external-content_440x440.png'
 import img_1920x1080                    from '../../static/pictures/external-content_1920x1080.png'
@@ -29,11 +29,11 @@ export default function Carousel() {
   
   const rigth         = { type: 'rightAction', collection: sliderArray }
 
-  const onKeyUp       = (e) => (e.key === 'ArrowRight')
+  const onArrowUp     = (e) => (e.key === 'ArrowRight')
                               ? dispatch(rigth) : (e.key === 'ArrowLeft')
                                 ? dispatch(left) : undefined
 
-  useEffect(() => (addEventListener('keyup', onKeyUp)), [])
+  useEffect(() => (addEventListener('keyup', onArrowUp)), [])
 
   return (
     <div className={styles.container}>
@@ -48,12 +48,14 @@ export default function Carousel() {
             </div>
           ))
         }
-        <button id={styles.goLeft} onClick={() => dispatch(left)}>
-          <i className="fa fa-space-shuttle fa-rotate-180"></i>
-        </button>
-        <button id={styles.goRight} onClick={() => dispatch(rigth)}>
-          <i className="fa fa-space-shuttle"></i>
-        </button>
+        <Button style={styles.btn_left_jet} 
+                click={() => dispatch(left)}
+                badge={"fa-space-shuttle fa-rotate-180"}
+        />
+        <Button style={styles.btn_right_jet} 
+                click={() => dispatch(rigth)}
+                badge={"fa-space-shuttle"}
+        />
       </div>
     </div>
   )
