@@ -6,6 +6,10 @@
   height:               100%;
   box-shadow:           5px 5px 5px #999;
 
+  @media (max-width: $breakpoint-mobile) {
+    height:              auto;
+  }
+
   &:hover {
     box-shadow:         10px 10px 10px #999;
   }
