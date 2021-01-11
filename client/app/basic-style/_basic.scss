@@ -30,14 +30,22 @@ $smart-border-fast:     url(
   transition:           0.3s;
   background:           $smart-border;
   border:               none;
+  background-color:   rgba(0, 0, 0, 0.10);
+
+  // synthwave style
+  text-shadow: 
+    0 0 10px var(--color1),
+    0 0 20px var(--color2),
+    0 0 40px var(--color3),
+    0 0 80px var(--color4);
+  will-change:          filter, color;
+  filter:               saturate(100%);
 
   &:hover {
-    opacity:            0.5;
     cursor:             url('../../../public/pointer-select-24.png') 2 2, pointer;
   }
 
   &:focus {
-    // box-shadow:         0 0 3pt 2pt rgba(0, 0, 0, 0.274);
     box-shadow:         0 0 3pt 2pt white;
     transition:         0.5s;
     outline:            none;
@@ -53,7 +61,6 @@ $smart-border-fast:     url(
   font-weight:          300;
   text-align:           center;
   font-size:            larger;
-  color:              #3f3f3f;
 }
 
 @mixin base_container {
@@ -66,11 +73,11 @@ $smart-border-fast:     url(
 }
 
 @mixin base_hover_shadow {
-  box-shadow:           5px 5px 5px #999;
+  box-shadow:           0px -1px 10px rgba(0,0,0,0.5), 0px 1px 10px rgba(0,0,0,0.7);
   transition:           0.5s;
 
   &:hover {
-    box-shadow:         10px 10px 10px #999;
+    box-shadow:         0px -1px 10px rgba(241, 169, 169, 0.5), 0px 1px 10px rgba(241, 169, 169, 0.5);
   }
 }
 

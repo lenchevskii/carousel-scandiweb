@@ -1,4 +1,5 @@
 @import '/client/app/basic-style/basic';
+@import '/client/app/basic-style/color';
 
 .container {
   @include              base_container;
@@ -22,4 +23,5 @@
 
 .btn_jump {
   @extend               %btn_style;
+  @include              synthwave_blue;
 }

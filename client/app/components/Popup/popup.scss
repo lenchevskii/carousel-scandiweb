@@ -1,0 +1,12 @@
+@import '/client/app/basic-style/basic';
+
+.popup {
+  @include              base_container;
+  height: 50%;
+  top: 10%;
+
+  @media (max-width: $breakpoint-mobile) {
+    height:             50vh;
+    margin:             10%;
+  }
+}

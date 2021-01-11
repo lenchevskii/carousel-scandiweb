@@ -1,0 +1,35 @@
+@mixin black_shadow {
+  background-color:   rgba(0, 0, 0, 0.10);
+}
+
+@mixin synthwave_purple {
+  color:              white;
+  --color1:           thistle;
+  --color2:           violet;
+  --color3:           fuchsia;
+  --color4:           purple;
+}
+
+@mixin synthwave_red {
+  color:              white;
+  --color1:           orangered;
+  --color2:           firebrick;
+  --color3:           maroon;
+  --color4:           darkred;
+}
+
+@mixin synthwave_green {
+  color:              white;
+  --color1:           yellow;
+  --color2:           lime;
+  --color3:           green;
+  --color4:           darkgreen;
+}
+
+@mixin synthwave_blue {
+  color:              white;
+  --color1:           aqua;
+  --color2:           skyblue;
+  --color3:           blue;
+  --color4:           darkblue;
+}

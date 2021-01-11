@@ -4,7 +4,7 @@ import React                            from 'react'
 
 const App = () => (
   <div className={styles.container}>
-    <Header/>
+    <Header />
     <Carousel />
     <Footer />
   </div>

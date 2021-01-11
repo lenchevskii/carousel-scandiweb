@@ -1,18 +1,18 @@
-import { Button }                       from 'components'
 import React                            from 'react'
 import styles                           from './header.scss'
+import { ButtonPopup }                  from 'components'
 
 const Header = () => (
-  <header className={styles.container}>
-    <Button style={styles.btn_add}
-            text='Add post or file URL'
-            writing={styles.content}
-            badge={"fa-instagram"}
+  <header className = {styles.container}>
+    <ButtonPopup  writing = {styles.content}
+                  badge   = {"fa-instagram"}
+                  style   = {styles.btn_add}
+                  text    = 'Add post or file URL'
     />
-    <Button style={styles.btn_remove}
-            text='Remove last element'
-            writing={styles.content}
-            badge={"fa-minus-square"}
+    <ButtonPopup  writing = {styles.content}
+                  badge   = {"fa-minus-square"}
+                  style   = {styles.btn_remove}
+                  text    = 'Remove last element'
     />
   </header>
 )

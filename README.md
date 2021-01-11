@@ -57,3 +57,13 @@ Simple client deploy was implement through the **GitHub Pages**.
 *PS:*
 
 *Client side was inspired by [this](https://www.youtube.com/watch?v=Tdpq-9XYoNM) video. The aimed component was rewritten by dint of **`useReducer()`** (instead of **`useState()`**), which allows troubleless working with complex logic inside the state.*
+
+---
+
+The following tips can simplify developer's hard life:
+
+- `jq` utility for terminal pretty print JSON
+
+  ```bash
+  curl -s http://localhost:3001/instagram.worm | jq .
+  ```
