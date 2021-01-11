@@ -10,8 +10,7 @@ const today                       = new Date()
 
 const moon_url                    = "https://www.instagram.com/p/B_xfntNJleV/?__a=1"
 
-app.get(`/instagram.worm`, async (req, res) => {
-  console.log(req.headers)
+app.post(`/instagram.worm`, async (req, res) => {
 
   const collection = await getInstagramCollection(moon_url)
 
