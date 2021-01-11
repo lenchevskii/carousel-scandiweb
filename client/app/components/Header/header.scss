@@ -16,6 +16,10 @@
   font-size:            inherit;
   position:             absolute;
   width:                48.5%;
+
+  &:hover {
+    background:         $smart-border-fast;
+  }
 }
 
 .btn_remove {

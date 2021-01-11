@@ -14,6 +14,10 @@
   @include              base_button;
   font-size:            inherit;
   width:                100%;
+
+  &:hover {
+    background:         $smart-border-fast;
+  }
 }
 
 .btn_jump {

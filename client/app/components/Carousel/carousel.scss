@@ -37,8 +37,10 @@
   top:                  50%;
 
   p {
-    margin:             inherit;                    // to propotionally change the ship
+    margin:             inherit;                    // to propotionally change the ship position
     text-indent:        0;
+    margin-left:        0;                          // to aline the ship == to aline text to width
+    margin-right:       0;                          // to aline the ship == to aline text to width
   }
 }
 

@@ -3,14 +3,10 @@
 .image {
   @include              base_block;
   @include              base_breakpoint_width;
+  @include              base_hover_shadow;
   height:               100%;
-  box-shadow:           5px 5px 5px #999;
 
   @media (max-width: $breakpoint-mobile) {
     height:              auto;
-  }
-
-  &:hover {
-    box-shadow:         10px 10px 10px #999;
   }
 }

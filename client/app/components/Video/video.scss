@@ -3,11 +3,11 @@
 .video {
   @include              base_block;
   @include              base_breakpoint_width;
+  @include              base_hover_shadow;
   background-color:     black;
-  width:                40%;
-  position:             absolute;
-  top:                  50%;
-  left:                 50%;
   transform:            translate(-50%, -50%);
-  box-shadow:           5px 5px 5px #999;
+  position:             absolute;
+  width:                40%;
+  left:                 50%;
+  top:                  50%;
 }
