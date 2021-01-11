@@ -3,7 +3,7 @@ import React                            from 'react'
 import styles                           from './header.scss'
 
 const Header = () => (
-  <div className={styles.container}>
+  <header className={styles.container}>
     <Button style={styles.btn_add}
             text='Add post or file URL'
             writing={styles.content}
@@ -14,7 +14,7 @@ const Header = () => (
             writing={styles.content}
             badge={"fa-minus-square"}
     />
-  </div>
+  </header>
 )
 
 export default Header

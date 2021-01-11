@@ -3,6 +3,7 @@
 .container {
   @include              base_container;
   bottom:               10px;
+  background:           none;
 }
 
 .content {
@@ -11,7 +12,7 @@
 
 %btn_style {
   @include              base_button;
-  @include              base_button_menu;
+  font-size:            inherit;
   width:                100%;
 }
 

@@ -9,8 +9,8 @@
   height:               100%;
 
   @media (max-width: $breakpoint-mobile) {
-    scroll-snap-type:   x mandatory;                              // for one swipe action necesserly
-    overflow-x:         scroll;                                   // for swipe necessarly
+    scroll-snap-type:   x mandatory;                // for one swipe action necesserly
+    overflow-x:         scroll;                     // for swipe necessarly
   }
 }
 
@@ -20,20 +20,26 @@
   height:               90%;
 
   @media (max-width: $breakpoint-mobile) {
-    scroll-snap-align:  start;                                    // for one swipe action necesserly
-    scroll-snap-type:   x proximity;                              // for smooth swipe action necesserly
+    scroll-snap-align:  start;                      // for one swipe action necesserly
+    scroll-snap-type:   x proximity;                // for smooth swipe action necesserly
     height:             auto;
   }
 }
 
 %btn_style {
   @include              base_button;
+  background:           none;
   transform:            translateY(-50%);
   font-size:            40pt;
   position:             absolute;
   height:               40%;
   width:                10%;
   top:                  50%;
+
+  p {
+    margin:             inherit;                    // to propotionally change the ship
+    text-indent:        0;
+  }
 }
 
 .btn_left_jet {

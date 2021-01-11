@@ -104,6 +104,10 @@ module.exports = {
         {
           from: path.resolve(__dirname, 'client/public/favicon.png'),
           to: path.resolve(__dirname, 'bundle/favicon.png')
+        },
+        {
+          from: path.resolve(__dirname, 'node_modules/focus-visible/dist/focus-visible.min.js'),
+          to: path.resolve(__dirname, 'bundle/node_modules/focus-visible/dist/focus-visible.min.js')
         }
       ]
     })

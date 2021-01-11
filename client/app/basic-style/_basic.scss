@@ -40,17 +40,27 @@ $smart-border:          url(
 }
 
 @mixin base_button {
+  border-radius:        10pt;
   transition:           0.3s;
-  background:           none;
+  background:           $smart-border;
   border:               none;
 
   &:hover {
     opacity:            0.5;
     cursor:             url('../../../public/pointer-select-24.png') 2 2, pointer;
   }
+
+  &:focus {
+    box-shadow:         0 0 3pt 2pt rgba(0, 0, 0, 0.274);
+    transition:         0.5s;
+    outline:            none;
+  }
+
+  &:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
 }
 
-@mixin base_button_menu {
-  border-radius:        10pt;
-  font-size:            inherit;
+[data-js-focus-visible] :focus:not([data-focus-visible-added]) {
+  box-shadow:           none;
 }

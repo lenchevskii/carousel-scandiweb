@@ -4,7 +4,7 @@ import styles                           from './text.scss'
 export default function Text({ src }) {
   return (
     <div className={styles.content}>
-      <section className={styles.text}>
+      <section className={styles.text} tabIndex='-1'>
         <h3>Lorem</h3>
         
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id varius tortor. Donec viverra magna quam, eu elementum tellus ultrices et. Duis ullamcorper venenatis diam, sed vehicula justo egestas non. Duis consectetur metus at nunc fringilla faucibus. Nullam ornare quis quam in interdum. Praesent eu ultrices magna, vel varius erat. In libero lectus, fermentum ac mollis sit amet, posuere sit amet enim. Donec ullamcorper eros sit amet quam laoreet, ut malesuada elit vehicula. Donec at malesuada lectus. Suspendisse lacinia nisi non lectus molestie rutrum. Nulla id fringilla orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mauris quam, tristique sit amet dictum in, consectetur in quam. Pellentesque placerat, mauris quis volutpat dapibus, nisl orci condimentum nibh, et lobortis lectus quam non diam.</p>

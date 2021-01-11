@@ -10,7 +10,6 @@
 - [x] Create a carousel component:
   - [x] Mobile
   - [x] Desktop
-    - [x] Keyboard accessibility (additional option)
   - [x] Swipes
     - [x] Desktop infinite option
     - [ ] Mobile infinite option
@@ -21,6 +20,7 @@
   - [ ] Client side
 - [x] Demonstrate component in [action](https://lenchevskii.github.io/scanditask/)
 - [x] Make the application' setup explanation
+- [x] Keyboard accessibility (additional option)
 
 **App usage:**
 
