@@ -102,8 +102,8 @@ module.exports = {
     new copyPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'client/public/favicon.png'),
-          to: path.resolve(__dirname, 'bundle/favicon.png')
+          from: path.resolve(__dirname, 'client/public/favicons/'),
+          to: path.resolve(__dirname, 'bundle/favicons/')
         },
         {
           from: path.resolve(__dirname, 'node_modules/focus-visible/dist/focus-visible.min.js'),
