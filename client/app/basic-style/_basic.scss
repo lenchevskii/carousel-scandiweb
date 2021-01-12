@@ -41,18 +41,21 @@ $smart-border-fast:     url(
   will-change:          filter, color;
   filter:               saturate(100%);
 
+  @media (max-width: $breakpoint-mobile) {
+    background:         none;
+  }
+
   &:hover {
     cursor:             url('../../../public/pointer-select-24.png') 2 2, pointer;
   }
 
   &:focus {
     box-shadow:         0 0 3pt 2pt white;
-    transition:         0.5s;
     outline:            none;
   }
 
   &:focus:not(:focus-visible) {
-    box-shadow: none;
+    box-shadow:         none;
   }
 }
 

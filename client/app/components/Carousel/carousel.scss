@@ -12,6 +12,7 @@
   @media (max-width: $breakpoint-mobile) {
     scroll-snap-type:   x mandatory;                // for one swipe action necesserly
     overflow-x:         scroll;                     // for swipe necessarly
+    scroll-behavior:    smooth;
   }
 }
 
@@ -67,15 +68,13 @@
 }
 
 .container {
-  @include              black_shadow;
   @include              base_container;
+  @include              black_shadow;
   bottom:               100px;
   top:                  100px;
-  padding:              10px;
-
+  
   @media (max-width: $breakpoint-mobile) {
-    button {
-      display:          none;
-    }
+    button { display:   none; }
+    padding:            10px;
   }
 }

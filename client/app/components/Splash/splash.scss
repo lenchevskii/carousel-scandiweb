@@ -1,0 +1,25 @@
+@import '/client/app/basic-style/basic';
+@import '/client/app/basic-style/color';
+
+.container {
+  @include              base_block;
+  background-position:  center;
+  background-repeat:    no-repeat;
+  background-color:   white;
+  background-image:     url('/client/public/splash.jpg');
+  background-size:      40%;
+  
+  animation:            hide 5s;
+
+  &::before {
+    @include            background_shadow;
+    background-size:    60%;
+  }
+}
+
+@keyframes hide {
+  0%    { opacity:      0; }
+  25%   { opacity:      0.5; }
+  50%   { opacity:      1; }
+  100%  { visibility:   hidden; }
+}

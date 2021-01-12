@@ -1,28 +1,21 @@
 @import '/client/app/basic-style/basic';
-
-p {
-  text-indent:          10px;
-}
-
-h3 {
-  text-indent:          0;
-  text-align:           center;
-  margin:               0px;
-}
+@import '/client/app/basic-style/color';
+@import '/client/app/basic-style/tag';
 
 .container {
   @include              base_block;
+  background-image:     url('/client/public/wallpaper.jpeg');
   height:               100%;
-  background-image:     url('/client/public/wallpaper_1.jpeg');
+
+  animation:            arise 5s;
+
+  &::before {
+    @include            background_shadow;
+  }
 }
 
-// background shadowing
-.container::before {
-  background-color:   rgba(0,0,0,0.05);
-  position:             absolute;
-  content:              "";
-  bottom:               0px;
-  right:                0px;
-  left:                 0px;
-  top:                  0px;
+@keyframes arise {
+  0%   { opacity:       0; }
+  95%  { opacity:       0; }
+  100% { opacity:       1; }
 }

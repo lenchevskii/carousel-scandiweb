@@ -2,11 +2,11 @@
 
 .image {
   @include              base_block;
-  @include              base_breakpoint_width;
   @include              base_hover_shadow;
+  @include              base_breakpoint_width;
   height:               100%;
 
   @media (max-width: $breakpoint-mobile) {
-    height:              auto;
+    height:             auto;
   }
 }

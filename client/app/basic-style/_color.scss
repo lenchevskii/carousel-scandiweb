@@ -2,12 +2,14 @@
   background-color:   rgba(0, 0, 0, 0.10);
 }
 
-@mixin synthwave_purple {
-  color:              white;
-  --color1:           thistle;
-  --color2:           violet;
-  --color3:           fuchsia;
-  --color4:           purple;
+@mixin background_shadow {
+  background-color: rgba(0,0,0,0.05);
+  position:           absolute;
+  content:            "";
+  bottom:             0px;
+  right:              0px;
+  left:               0px;
+  top:                0px;
 }
 
 @mixin synthwave_red {
@@ -18,6 +20,14 @@
   --color4:           darkred;
 }
 
+@mixin synthwave_blue {
+  color:              white;
+  --color1:           aqua;
+  --color2:           skyblue;
+  --color3:           blue;
+  --color4:           darkblue;
+}
+
 @mixin synthwave_green {
   color:              white;
   --color1:           yellow;
@@ -26,10 +36,10 @@
   --color4:           darkgreen;
 }
 
-@mixin synthwave_blue {
+@mixin synthwave_purple {
   color:              white;
-  --color1:           aqua;
-  --color2:           skyblue;
-  --color3:           blue;
-  --color4:           darkblue;
+  --color1:           thistle;
+  --color2:           violet;
+  --color3:           fuchsia;
+  --color4:           purple;
 }
