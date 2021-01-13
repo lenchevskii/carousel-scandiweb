@@ -2,7 +2,7 @@
 
 ---
 
-# Scandiweb Test Task (**[full text one's](https://github.com/lenchevskii/scanditask/blob/main/TASK.md)**)
+# Scandiweb Test Task (**[full text one's](https://github.com/lenchevskii/visualworm/blob/main/TASK.md)**)
 
   **ToDo:**
 
@@ -18,7 +18,7 @@
 - [ ] Multi-picture referenced post usage ability
   - [x] Server side
   - [ ] Client side
-- [x] Demonstrate component in [action](https://lenchevskii.github.io/scanditask/)
+- [x] Demonstrate component in [action](https://lenchevskii.github.io/visualworm/)
 - [x] Make the application' setup explanation
 - [x] Keyboard accessibility (additional option)
 
@@ -27,7 +27,7 @@
 Clone a repository:
 
   ```bash
-  git clone https://github.com/lenchevskii/scanditask.git
+  git clone https://github.com/lenchevskii/visualworm.git
   ```
 
 Install actual node packages:
@@ -50,13 +50,13 @@ Simple client deploy was implement through the **GitHub Pages**.
 
 ---
 
-## Deployed application: [Scanditask](https://lenchevskii.github.io/scanditask/)
+## Deployed application: [Scanditask](https://lenchevskii.github.io/visualworm/)
 
 ---
 
 *PS:*
 
-*Client side was inspired by [this](https://www.youtube.com/watch?v=Tdpq-9XYoNM) video. The aimed component was rewritten by dint of **`useReducer()`** (instead of **`useState()`**), which allows troubleless working with complex logic inside the state.*
+*Carousel component was inspired by [this](https://www.youtube.com/watch?v=Tdpq-9XYoNM) video. The aimed component was rewritten by dint of **`useReducer()`** (instead of **`useState()`**), which allows troubleless working with complex logic inside the state.*
 
 ---
 
