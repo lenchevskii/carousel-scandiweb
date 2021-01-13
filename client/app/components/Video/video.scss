@@ -2,11 +2,16 @@
 
 .video {
   @include              base_block;
-  @include              base_breakpoint_width;
   @include              base_hover_shadow;
+  @include              base_breakpoint_width;
   transform:            translate(-50%, -50%);
   position:             absolute;
   width:                40%;
   left:                 50%;
   top:                  50%;
+  
+  @media (max-height: $breakpoint-mobile) {
+    text-align:         center;
+    height:             80%;
+  }
 }

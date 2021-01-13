@@ -28,6 +28,19 @@
   }
 }
 
+.container {
+  @include              base_container;
+  @include              black_shadow;
+  bottom:               100px;
+  top:                  100px;
+  
+
+  @media (max-width: $breakpoint-mobile) {
+    button { display:   none; }
+    background:         none;
+  }
+}
+
 %btn_style {
   @include              base_button;
   @include              synthwave_purple;
@@ -64,17 +77,5 @@
 
   &:hover {
     margin-right:       20px;
-  }
-}
-
-.container {
-  @include              base_container;
-  @include              black_shadow;
-  bottom:               100px;
-  top:                  100px;
-  
-  @media (max-width: $breakpoint-mobile) {
-    button { display:   none; }
-    padding:            10px;
   }
 }

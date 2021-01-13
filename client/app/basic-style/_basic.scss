@@ -1,3 +1,5 @@
+@import '/client/app/basic-style/color';
+
 $breakpoint-mobile:     540px;
 
 $smart-border:          url(
@@ -30,16 +32,10 @@ $smart-border-fast:     url(
   transition:           0.3s;
   background:           $smart-border;
   border:               none;
+  
   background-color:   rgba(0, 0, 0, 0.10);
-
-  // synthwave style
-  text-shadow: 
-    0 0 10px var(--color1),
-    0 0 20px var(--color2),
-    0 0 40px var(--color3),
-    0 0 80px var(--color4);
-  will-change:          filter, color;
-  filter:               saturate(100%);
+  
+  @include              synthwave_style;
 
   @media (max-width: $breakpoint-mobile) {
     background:         none;
@@ -73,6 +69,16 @@ $smart-border-fast:     url(
   right:                10px;
   left:                 10px;
   background:           $smart-border;
+}
+
+@mixin synthwave_style {
+  text-shadow: 
+    0 0 10px var(--color1),
+    0 0 20px var(--color2),
+    0 0 40px var(--color3),
+    0 0 80px var(--color4);
+  will-change:          filter, color;
+  filter:               saturate(100%);
 }
 
 @mixin base_hover_shadow {

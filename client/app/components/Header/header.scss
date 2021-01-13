@@ -4,7 +4,6 @@
 .container {
   @include              base_container;
   display:              flex;
-  background:           none;
 }
 
 .content {
