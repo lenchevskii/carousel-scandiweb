@@ -7,15 +7,11 @@
   background-image:     url('/client/public/wallpaper.jpeg');
   height:               100%;
 
-  animation:            arise 5s;
-
-  &::before {
-    @include            background_shadow;
-  }
+  animation:            arise 7s;
 }
 
 @keyframes arise {
-  0%   { opacity:       0; }
-  95%  { opacity:       0; }
-  100% { opacity:       1; }
+  0%    { opacity:       0; }
+  95%   { opacity:       0; }
+  100%  { opacity:       1; }
 }

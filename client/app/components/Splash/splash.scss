@@ -9,7 +9,7 @@
   background-image:     url('/client/public/splash.jpg');
   background-size:      40%;
   
-  animation:            hide 5s;
+  animation:            inhibit 7s;
 
   &::before {
     @include            background_shadow;
@@ -17,9 +17,66 @@
   }
 }
 
+.greeting {
+  font-family:          "Ubuntu";
+  font-weight:          300;
+  position:             absolute;
+  padding:              5pt;
+  left:                 5%;
+  top:                  60%;
+  
+  letter-spacing:       .15em;
+  border-right:         .15em solid black;
+  white-space:          nowrap;
+  max-width:            340px;
+  overflow:             hidden;
+  margin:               0 auto;
+  
+  animation: 
+    typing              3.5s steps(35),
+    blink-caret         .5s step-end infinite,
+    hide                6.5s;
+  
+  animation-fill-mode:  forwards;
+
+  &::before {
+    @include            background_shadow;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    max-width:          282px;
+    font-size:          smaller;
+    top:                70%;
+
+    animation: 
+      typing              2s steps(35),
+      blink-caret         .5s step-end infinite,
+      hide                6.5s;
+    
+    animation-fill-mode:  forwards;
+  }
+}
+
 @keyframes hide {
   0%    { opacity:      0; }
-  25%   { opacity:      0.5; }
+  25%   { opacity:      1; }
+  100%  { visibility:   hidden;}
+}
+
+@keyframes typing {
+  from  { width:        0 }
+  to    { width:        100% }
+}
+
+@keyframes inhibit {
+  0%    { opacity:      0; }
+  25%   { opacity:      0; }
   50%   { opacity:      1; }
-  100%  { visibility:   hidden; }
+  100%  { visibility:   hidden;}
+}
+
+@keyframes blink-caret {
+  from,
+  to    { border-color: transparent }
+  50%   { border-color: black; }
 }

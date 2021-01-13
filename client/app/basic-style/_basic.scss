@@ -35,7 +35,7 @@ $smart-border-fast:     url(
   
   background-color:   rgba(0, 0, 0, 0.10);
   
-  @include              synthwave_style;
+  @include              base_synthwave;
 
   @media (max-width: $breakpoint-mobile) {
     background:         none;
@@ -71,7 +71,7 @@ $smart-border-fast:     url(
   background:           $smart-border;
 }
 
-@mixin synthwave_style {
+@mixin base_synthwave {
   text-shadow: 
     0 0 10px var(--color1),
     0 0 20px var(--color2),
