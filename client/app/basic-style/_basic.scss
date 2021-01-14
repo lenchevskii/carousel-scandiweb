@@ -52,7 +52,7 @@ $smart-border-fast:     url(
     background:         none;
     
     @media (max-width: $breakpoint-mobile) {
-      transition:       0.3s;
+      transition:       0.1s;
       transform:        scale(0.95, 0.95);
     }  
   }

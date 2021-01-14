@@ -18,11 +18,13 @@
                           url('/client/public/splash-background-2.jpg');
     background-size:      100%,
                           100%;
-    background-repeat:    no-repeat,
-                          no-repeat;
+    background-repeat:    round,
+                          round;
     background-position:  bottom,
                           top;
-    background-color:   white;
+    background-color:     white;
+
+    background-blend-mode: multiply;
   }
 
   &::before {

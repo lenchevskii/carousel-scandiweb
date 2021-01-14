@@ -10,8 +10,8 @@
   background-size:      40%;
 
   &::before {
-    @include            background_shadow;
-    background-size:    60%;
+    @include              background_shadow;
+    background-size:      60%;
 
     animation:            hide 6.7s;
     animation-fill-mode:  forwards;
@@ -45,9 +45,9 @@
   }
 
   @media (max-width: $breakpoint-mobile) {
-    max-width:          282px;
-    font-size:          smaller;
-    top:                70%;
+    max-width:            282px;
+    font-size:            smaller;
+    top:                  70%;
 
     animation: 
       typing              2s steps(35),
