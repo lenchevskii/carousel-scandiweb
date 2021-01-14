@@ -49,10 +49,18 @@ $smart-border-fast:     url(
   &:focus {
     box-shadow:         0 0 3pt 2pt white;
     outline:            none;
+    background:         none;
+    
+    @media (max-width: $breakpoint-mobile) {
+      transition:       0.3s;
+      transform:        scale(0.95, 0.95);
+    }  
   }
 
   &:focus:not(:focus-visible) {
-    box-shadow:         none;
+    box-shadow:           none;
+    background:           none;
+    outline:              none;
   }
 }
 
@@ -97,7 +105,13 @@ $smart-border-fast:     url(
   }
 }
 
-[data-js-focus-visible] :focus:not([data-focus-visible-added]) {
+[data-js-focus-visible]:focus:not([data-focus-visible-added]) {
   box-shadow:           none;
   background:           none;
+  outline:              none;
+
+  @media (max-width: $breakpoint-mobile) {
+    @include            black_shadow;
+    @include            base_shadow;
+  }
 }

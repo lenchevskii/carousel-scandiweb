@@ -5,13 +5,24 @@
 .container {
   @include              base_block;
   background-image:     url('/client/public/wallpaper.jpeg');
+  background-repeat:    no-repeat;
+  background-size:      100%;
+  background-position:  center;
   height:               100%;
 
   animation:            arise 7s;
   animation-fill-mode:  forwards;
 
   @media (max-width: $breakpoint-mobile) {
-    background-image:   url('/client/public/splash.jpg');
+    background-image:     url('/client/public/splash-background-3.jpg'),
+                          url('/client/public/splash-background-2.jpg');
+    background-size:      100%,
+                          100%;
+    background-repeat:    no-repeat,
+                          no-repeat;
+    background-position:  bottom,
+                          top;
+    background-color:   white;
   }
 
   &::before {
