@@ -5,7 +5,7 @@
 }
 
 .text {
-  @include              base_shadow;
+  @include              shadowing_box;
   @include              base_breakpoint_width;
   margin-right:         20%;
   margin-left:          20%;

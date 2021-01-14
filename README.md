@@ -2,7 +2,7 @@
 
 ---
 
-# Scandiweb Test Task (**[full text one's](https://github.com/lenchevskii/visualworm/blob/main/TASK.md)**)
+### Scandiweb Test Task (**[full text one's](https://github.com/lenchevskii/visualworm/blob/main/TASK.md)**)
 
   **ToDo:**
 
@@ -50,7 +50,7 @@ Simple client deploy was implement through the **GitHub Pages**.
 
 ---
 
-## Deployed application: [Scanditask](https://lenchevskii.github.io/visualworm/)
+### Deployed client side: [Visual Worm](https://lenchevskii.github.io/visualworm/)
 
 ---
 
@@ -67,3 +67,4 @@ The following tips can simplify developer's hard life:
   ```bash
   curl -s http://localhost:3001/instagram.worm | jq .
   ```
+- `focus-visible` [polyfill](https://github.com/WICG/focus-visible) allow to use **focus-visiable** pseudo-selector properties in any browser

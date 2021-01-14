@@ -1,8 +1,17 @@
-@mixin black_shadow {
+@mixin shadowing_dark {
   background-color:   rgba(0, 0, 0, 0.10);
 }
 
-@mixin background_shadow {
+@mixin shadowing_box {
+  box-shadow:           0px -1px 10px rgba(0,0,0,0.5), 0px 1px 10px rgba(0,0,0,0.7);
+  transition:           0.5s;
+
+  &:hover {
+    box-shadow:         0px -1px 10px rgba(241, 169, 169, 0.5), 0px 1px 10px rgba(241, 169, 169, 0.5);
+  }
+}
+
+@mixin shadowing_background {
   background-color: rgba(0,0,0,0.05);
   position:           absolute;
   content:            "";
@@ -12,7 +21,19 @@
   top:                0px;
 }
 
+@mixin base_synthwave {
+  text-shadow: 
+    0 0 10px var(--color1),
+    0 0 20px var(--color2),
+    0 0 40px var(--color3),
+    0 0 80px var(--color4);
+  will-change:          filter, color;
+  filter:               saturate(100%);
+}
+
 @mixin synthwave_red {
+  @include            base_synthwave;
+
   color:              white;
   --color1:           orangered;
   --color2:           firebrick;
@@ -21,6 +42,8 @@
 }
 
 @mixin synthwave_blue {
+  @include            base_synthwave;
+
   color:              white;
   --color1:           aqua;
   --color2:           skyblue;
@@ -29,6 +52,8 @@
 }
 
 @mixin synthwave_green {
+  @include            base_synthwave;
+
   color:              white;
   --color1:           yellow;
   --color2:           lime;
@@ -37,6 +62,8 @@
 }
 
 @mixin synthwave_purple {
+  @include            base_synthwave;
+  
   color:              white;
   --color1:           thistle;
   --color2:           violet;

@@ -10,7 +10,7 @@
   background-size:      40%;
 
   &::before {
-    @include              background_shadow;
+    @include              shadowing_background;
     background-size:      60%;
 
     animation:            hide 6.7s;
@@ -41,7 +41,7 @@
   animation-fill-mode:  forwards;
 
   &::before {
-    @include            background_shadow;
+    @include            shadowing_background;
   }
 
   @media (max-width: $breakpoint-mobile) {

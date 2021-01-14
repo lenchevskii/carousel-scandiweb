@@ -28,7 +28,7 @@
   }
 
   &::before {
-    @include            background_shadow;
+    @include              shadowing_background;
   }
 }
 

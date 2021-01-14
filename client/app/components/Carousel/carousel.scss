@@ -30,7 +30,7 @@
 
 .container {
   @include              base_container;
-  @include              black_shadow;
+  @include              shadowing_dark;
   bottom:               100px;
   top:                  100px;
 

@@ -1,7 +1,7 @@
 {
-  "name": "scanditask",
+  "name": "visualworm",
   "version": "1.0.0",
-  "description": "Scandiweb test task",
+  "description": "Visual Worm. Scandiweb test task",
   "main": "/client/index.js",
   "scripts": {
     "client": "rm -rf bundle/ && webpack --mode production && webpack serve --config ./webpack.config.js --mode development",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lenchevskii/scanditask.git"
+    "url": "https://github.com/lenchevskii/visualworm.git"
   },
   "keywords": [
     "react",
@@ -22,9 +22,9 @@
   "author": "Dzmitry Liancheuski",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lenchevskii/scanditask/issues"
+    "url": "https://github.com/lenchevskii/visualworm/issues"
   },
-  "homepage": "https://github.com/lenchevskii/scanditask#readme",
+  "homepage": "https://github.com/lenchevskii/visualworm#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

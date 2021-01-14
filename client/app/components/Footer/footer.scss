@@ -18,6 +18,8 @@
 
   &:hover {
     background:         $smart-border-fast;
+
+    @include            base_breakpoint_shadow;
   }
 }
 

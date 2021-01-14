@@ -1,6 +1,6 @@
 @import '/client/app/basic-style/color';
 
-$breakpoint-mobile:     540px;
+$breakpoint-mobile:     600px;
 
 $smart-border:          url(
                           'data:image/svg+xml,\
@@ -33,14 +33,9 @@ $smart-border-fast:     url(
   background:           $smart-border;
   border:               none;
   
-  @include              black_shadow;
-  @include              base_synthwave;
+  @include              shadowing_dark;
 
-  @media (max-width: $breakpoint-mobile) {
-    background:         none;
-    @include            black_shadow;
-    @include            base_shadow;
-  }
+  @include              base_breakpoint_shadow;
 
   &:hover {
     cursor:             url('../../../public/pointer-select-24.png') 2 2, pointer;
@@ -54,22 +49,15 @@ $smart-border-fast:     url(
     @media (max-width: $breakpoint-mobile) {
       transition:       0.1s;
       transform:        scale(0.95, 0.95);
-    }  
+    }
   }
 
   &:focus:not(:focus-visible) {
-    box-shadow:           none;
-    background:           none;
-    outline:              none;
-  }
-}
+    box-shadow:         none;
+    background:         none;
+    outline:            none;
 
-@mixin base_shadow {
-  box-shadow:           0px -1px 10px rgba(0,0,0,0.5), 0px 1px 10px rgba(0,0,0,0.7);
-  transition:           0.5s;
-
-  &:hover {
-    box-shadow:         0px -1px 10px rgba(241, 169, 169, 0.5), 0px 1px 10px rgba(241, 169, 169, 0.5);
+    @include            base_breakpoint_shadow;
   }
 }
 
@@ -82,21 +70,11 @@ $smart-border-fast:     url(
 
 @mixin base_container {
   border-radius:        10pt;
+  background:           $smart-border;
   position:             absolute;
   margin:               15px;
   right:                10px;
   left:                 10px;
-  background:           $smart-border;
-}
-
-@mixin base_synthwave {
-  text-shadow: 
-    0 0 10px var(--color1),
-    0 0 20px var(--color2),
-    0 0 40px var(--color3),
-    0 0 80px var(--color4);
-  will-change:          filter, color;
-  filter:               saturate(100%);
 }
 
 @mixin base_breakpoint_width {
@@ -105,13 +83,18 @@ $smart-border-fast:     url(
   }
 }
 
+@mixin base_breakpoint_shadow {
+  @media (max-width: $breakpoint-mobile) {
+    background:         none;
+    @include            shadowing_dark;
+    @include            shadowing_box;
+  }
+}
+
 [data-js-focus-visible]:focus:not([data-focus-visible-added]) {
   box-shadow:           none;
   background:           none;
   outline:              none;
-
-  @media (max-width: $breakpoint-mobile) {
-    @include            black_shadow;
-    @include            base_shadow;
-  }
+  
+  @include              base_breakpoint_shadow;
 }

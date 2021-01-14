@@ -2,7 +2,7 @@
 
 .image {
   @include              base_block;
-  @include              base_shadow;
+  @include              shadowing_box;
   @include              base_breakpoint_width;
   height:               100%;
 
