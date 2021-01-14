@@ -8,6 +8,15 @@
   height:               100%;
 
   animation:            arise 7s;
+  animation-fill-mode:  forwards;
+
+  @media (max-width: $breakpoint-mobile) {
+    background-image:   url('/client/public/splash.jpg');
+  }
+
+  &::before {
+    @include            background_shadow;
+  }
 }
 
 @keyframes arise {

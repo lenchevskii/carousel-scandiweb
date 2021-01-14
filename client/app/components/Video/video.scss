@@ -2,7 +2,7 @@
 
 .video {
   @include              base_block;
-  @include              base_hover_shadow;
+  @include              base_shadow;
   @include              base_breakpoint_width;
   transform:            translate(-50%, -50%);
   position:             absolute;

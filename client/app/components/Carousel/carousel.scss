@@ -33,7 +33,6 @@
   @include              black_shadow;
   bottom:               100px;
   top:                  100px;
-  
 
   @media (max-width: $breakpoint-mobile) {
     button { display:   none; }
