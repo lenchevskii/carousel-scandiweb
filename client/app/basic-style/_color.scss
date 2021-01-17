@@ -1,13 +1,25 @@
-@mixin shadowing_dark {
-  background-color:   rgba(0, 0, 0, 0.10);
-}
-
 @mixin shadowing_box {
   box-shadow:           0px -1px 10px rgba(0,0,0,0.5), 0px 1px 10px rgba(0,0,0,0.7);
   transition:           0.5s;
 
   &:hover {
     box-shadow:         0px -1px 10px rgba(241, 169, 169, 0.5), 0px 1px 10px rgba(241, 169, 169, 0.5);
+  }
+}
+
+@mixin shadowing_dark {
+  background-color:   rgba(0, 0, 0, 0.20);
+  
+  @media (max-width: $breakpoint-mobile) {
+    background-color: rgba(0, 0, 0, 0.10);
+  }
+}
+
+@mixin shadowing_breakpoint {
+  @media (max-width: $breakpoint-mobile) {
+    background:         none;
+    @include            shadowing_dark;
+    @include            shadowing_box;
   }
 }
 

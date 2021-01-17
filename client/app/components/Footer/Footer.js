@@ -1,13 +1,14 @@
-import { Button }                       from 'components'
+import { Button, Popup }                from 'components'
 import styles                           from './footer.scss'
 import React                            from 'react'
 
 const Footer = () => (
-  <footer className={styles.container}>
-    <Button style={styles.btn_jump}
-            text='Jump to the specific slide'
-            writing={styles.content}
-            badge={"fa-chevron-circle-right"}
+  <footer className = {styles.container}>
+    <Button writing = {styles.content}
+            style   = {styles.btn_jump}
+            badge   = {"fa-chevron-circle-right"}
+            text    = 'Jump to the specific slide'
+            href    = {'#jump'}
     />
   </footer>
 )

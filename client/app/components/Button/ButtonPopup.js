@@ -3,7 +3,7 @@ import { Button, Popup }              from 'components'
 import styles                         from '../Popup/popup.scss'
 
 const ButtonPopup = ({ writing, badge, style, text }) => {
-  const [hidden, setVisibility] = useState(false)
+  const [visible, setVisibility] = useState(false)
 
   // useEffect(() => hidden ? null : (document.addEventListener('mousedown' || 'keydown', )))
 
@@ -11,7 +11,7 @@ const ButtonPopup = ({ writing, badge, style, text }) => {
             <Button writing = {writing} 
                     badge   = {badge}
                     style   = {style}
-                    click   = {() => setVisibility(!hidden)}
+                    click   = {() => setVisibility(!visible)}
                     text    = {text}
             />
             {/* {<Popup style={styles.popup}/>} */}

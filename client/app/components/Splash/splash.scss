@@ -10,11 +10,9 @@
   background-size:      40%;
 
   &::before {
-    @include              shadowing_background;
-    background-size:      60%;
-
-    animation:            hide 6.7s;
-    animation-fill-mode:  forwards;
+    @include            shadowing_background;
+    background-size:    60%;
+    animation:          hide 6.7s forwards;
   }
 }
 
@@ -35,7 +33,7 @@
   
   animation: 
     typing              3.5s steps(35),
-    blink-caret         .5s step-end infinite,
+    blink_caret         .5s step-end infinite,
     hide                6.5s;
   
   animation-fill-mode:  forwards;
@@ -51,7 +49,7 @@
 
     animation: 
       typing              2s steps(35),
-      blink-caret         .5s step-end infinite,
+      blink_caret         .5s step-end infinite,
       hide                6.5s;
     
     animation-fill-mode:  forwards;
@@ -61,7 +59,7 @@
 @keyframes hide {
   0%    { opacity:      0; }
   25%   { opacity:      1; }
-  100%  { visibility:   hidden;}
+  100%  { visibility:   hidden; }
 }
 
 @keyframes typing {
@@ -69,7 +67,7 @@
   to    { width:        100% }
 }
 
-@keyframes blink-caret {
+@keyframes blink_caret {
   from,
   to    { border-color: transparent }
   50%   { border-color: black; }

@@ -10,8 +10,7 @@
   background-position:  center;
   height:               100%;
 
-  animation:            arise 7s;
-  animation-fill-mode:  forwards;
+  animation:            arise 7s forwards;
 
   @media (max-width: $breakpoint-mobile) {
     background-image:     url('/client/public/splash-background-3.jpg'),
@@ -30,6 +29,32 @@
   &::before {
     @include              shadowing_background;
   }
+}
+
+%popup_style {
+  @include              base_popup;
+}
+
+.jump {
+  @extend               %popup_style;
+  @include              synthwave_blue;
+  
+  &:target {
+    visibility:         visible;
+    height:             80%;
+    width:              80%;
+    top:                10%;
+  }
+
+  &::after {
+    @include            shadowing_background;
+    @include            base_block;
+    background-color: rgba(70, 188, 224, 0.3);
+  }
+}
+
+.close {
+  @include              base_close;
 }
 
 @keyframes arise {

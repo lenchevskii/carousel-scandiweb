@@ -35,7 +35,7 @@ $smart-border-fast:     url(
   
   @include              shadowing_dark;
 
-  @include              base_breakpoint_shadow;
+  @include              shadowing_breakpoint;
 
   &:hover {
     cursor:             url('../../../public/pointer-select-24.png') 2 2, pointer;
@@ -44,20 +44,10 @@ $smart-border-fast:     url(
   &:focus {
     box-shadow:         0 0 3pt 2pt white;
     outline:            none;
-    background:         none;
     
     @media (max-width: $breakpoint-mobile) {
-      transition:       0.1s;
-      transform:        scale(0.95, 0.95);
+      animation:        breakpoint_click 0.7s ease forwards;
     }
-  }
-
-  &:focus:not(:focus-visible) {
-    box-shadow:         none;
-    background:         none;
-    outline:            none;
-
-    @include            base_breakpoint_shadow;
   }
 }
 
@@ -66,6 +56,53 @@ $smart-border-fast:     url(
   font-weight:          300;
   text-align:           center;
   font-size:            larger;
+}
+
+@mixin base_popup {
+  @include              base_container;
+  visibility:           hidden;
+  background:           none;
+  position:             absolute;
+  height:               50%;
+  top:                  10%;
+
+  @media (max-width: $breakpoint-mobile) {
+    height:             50vh;
+    margin:             10%;
+  }
+}
+
+@mixin base_close {
+  display:              block;
+  position:             relative;
+  
+  &::after {
+    right:              -1rem;
+    top:                -1rem;
+    width:              2rem;
+    height:             2rem;
+    position:           absolute;
+    display:            flex;
+    z-index:            1;
+    align-items:        center;
+    justify-content:    center;
+    background-color: black;
+    border-radius:      50%;
+    color:            white;
+    content:            "×";
+    cursor:             pointer;
+  }
+
+  &::before {
+    left:               0;
+    top:                0;
+    width:              100%;
+    height:             100%;
+    position:           fixed;
+    background-color: rgba(0,0,0,.7);
+    content:            "";
+    cursor:             default;
+  }
 }
 
 @mixin base_container {
@@ -83,18 +120,26 @@ $smart-border-fast:     url(
   }
 }
 
-@mixin base_breakpoint_shadow {
-  @media (max-width: $breakpoint-mobile) {
-    background:         none;
-    @include            shadowing_dark;
-    @include            shadowing_box;
-  }
+@keyframes breakpoint_click {
+  0%    { transform:    scale(0.95); }
+  100%  { 
+          transform:    scale(1);
+          box-shadow:   0px -1px 10px rgba(0,0,0,0.5), 0px 1px 10px rgba(0,0,0,0.7);
+          background-color: rgba(0, 0, 0, 0.10);
+        }
 }
 
 [data-js-focus-visible]:focus:not([data-focus-visible-added]) {
   box-shadow:           none;
-  background:           none;
   outline:              none;
-  
-  @include              base_breakpoint_shadow;
 }
+
+// [data-js-focus-visible]:focus([data-focus-visible-added]) {
+//   box-shadow:         0 0 3pt 2pt white;
+//   background:         none;
+//   outline:            none;
+  
+//   @media (max-width: $breakpoint-mobile) {
+//     animation:        breakpoint_click 0.7s ease forwards;
+//   }
+// }
