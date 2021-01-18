@@ -1,18 +1,21 @@
-import React                            from 'react'
+import { Button }                       from 'components'
 import styles                           from './header.scss'
-import { ButtonPopup }                  from 'components'
+import React                            from 'react'
 
 const Header = () => (
-  <header className = {styles.container}>
-    <ButtonPopup  writing = {styles.content}
-                  badge   = {"fa-instagram"}
-                  style   = {styles.btn_add}
-                  text    = 'Add post or file URL'
+  <header className   = { styles.container }>
+    <Button   writing = { styles.content }
+              badge   = { "fa-instagram" }
+              style   = { styles.btn_add }
+              text    = { 'Add post or file URL' }
+              href    = { '#add' }
     />
-    <ButtonPopup  writing = {styles.content}
-                  badge   = {"fa-minus-square"}
-                  style   = {styles.btn_remove}
-                  text    = 'Remove last element'
+    <Button   writing = { styles.content }
+              badge   = { "fa-minus-square" }
+              style   = { styles.btn_remove }
+              text    = { 'Remove last element' }
+              href    = { '#remove' }
+              // click   = { () => (alert('Warning: you will remove the collection!'))}
     />
   </header>
 )

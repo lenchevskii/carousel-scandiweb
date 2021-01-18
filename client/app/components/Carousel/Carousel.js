@@ -16,7 +16,7 @@ const reducer = (state, action) => {
 
 export default function Carousel() {
 
-  const sliderArray   = [ <Image src={img_440x440} />
+  const initialSlider = [ <Image src={img_440x440} />
                         , <Text />
                         , <Image src={img_1920x1080} />
                         , <Image src='https://scandiweb.com/assets/images/scandiweb_logo.png' />
@@ -25,9 +25,9 @@ export default function Carousel() {
 
   const [x, dispatch] = useReducer(reducer, 0)
 
-  const left          = { type: 'leftAction', collection: sliderArray }
+  const left          = { type: 'leftAction', collection: initialSlider }
   
-  const rigth         = { type: 'rightAction', collection: sliderArray }
+  const rigth         = { type: 'rightAction', collection: initialSlider }
 
   const onArrowUp     = (e) => (e.key === 'ArrowRight')
                               ? dispatch(rigth) : (e.key === 'ArrowLeft')
@@ -36,25 +36,25 @@ export default function Carousel() {
   useEffect(() => (addEventListener('keyup', onArrowUp)), [])
 
   return (
-    <div className={styles.container}>
-      <div className={styles.slider}>
+    <div className    = { styles.container } >
+      <div className  = { styles.slider } >
         {
-          sliderArray.map((item, index) => (
-            <div key={index}
-              className={styles.slide}
-              style={{ transform: `translateX(${x}%)` }}
-            >
-              {item}
-            </div>
+          initialSlider.map((item, index) => (
+            <div className  = { styles.slide }
+                 style      = { { transform: `translateX(${x}%)` } }
+                 key        = { index }
+            >{item}</div>
           ))
         }
-        <Button style={styles.btn_left_jet} 
-                click={() => dispatch(left)}
-                badge={"fa-space-shuttle fa-rotate-180"}
+        <Button style = { styles.btn_left_jet } 
+                click = { () => dispatch(left) }
+                badge = { "fa-space-shuttle fa-rotate-180" }
+                href  = { '#' }
         />
-        <Button style={styles.btn_right_jet} 
-                click={() => dispatch(rigth)}
-                badge={"fa-space-shuttle"}
+        <Button style = { styles.btn_right_jet } 
+                click = { () => dispatch(rigth) }
+                badge = { "fa-space-shuttle" }
+                href  = { '#' }
         />
       </div>
     </div>

@@ -1,13 +1,13 @@
 import React                            from 'react'
 import styles                           from './popup.scss'
 
-const Popup = ({ id, style, close }) => (
-  <a class={close === true ? 'close' : ''}>
+const Popup = ({ id, style, close, placeholder }) => (
+  <div>
     <form action='' method='POST' id={id} className={style}>
-      Link:<br/>
-      <input type='text' />
+      <input type='text' placeholder={placeholder} />
+      <a href={'#'} class={close ? styles.close : ''}></a>
     </form>
-  </a>
+  </div>
 )
 
 export default Popup

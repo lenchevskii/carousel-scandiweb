@@ -1,28 +1,5 @@
 @import '/client/app/basic-style/basic';
 
-.popup {
-  @include              base_container;
-  @include              synthwave_purple;
-  visibility:           hidden;
-  background:           none;
-  position:             absolute;
-  height:               50%;
-  top:                  10%;
-
-  @media (max-width: $breakpoint-mobile) {
-    height:             50vh;
-    margin:             10%;
-  }
-}
-
-#add {
-  visibility:           visible;
-}
-
-#remove {
-  visibility:           visible;
-}
-
-#jump:target {
-  visibility:           visible;
+.close {
+  @include              base_close;
 }

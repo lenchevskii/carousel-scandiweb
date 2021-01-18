@@ -13,52 +13,41 @@
   animation:            arise 7s forwards;
 
   @media (max-width: $breakpoint-mobile) {
-    background-image:     url('/client/public/splash-background-3.jpg'),
-                          url('/client/public/splash-background-2.jpg');
-    background-size:      100%,
-                          100%;
-    background-repeat:    round,
-                          round;
-    background-position:  bottom,
-                          top;
-    background-color:     white;
+    background-image:       url('/client/public/splash-background-3.jpg'),
+                            url('/client/public/splash-background-2.jpg');
+    background-size:        100%,
+                            100%;
+    background-repeat:      round,
+                            round;
+    background-position:    bottom,
+                            top;
+    background-color:       white;
 
-    background-blend-mode: multiply;
+    background-blend-mode:  multiply;
   }
 
   &::before {
-    @include              shadowing_background;
+    @include            shadowing_background;
   }
-}
-
-%popup_style {
-  @include              base_popup;
 }
 
 .jump {
-  @extend               %popup_style;
+  @include              base_popup;
   @include              synthwave_blue;
-  
-  &:target {
-    visibility:         visible;
-    height:             80%;
-    width:              80%;
-    top:                10%;
-  }
-
-  &::after {
-    @include            shadowing_background;
-    @include            base_block;
-    background-color: rgba(70, 188, 224, 0.3);
-  }
 }
 
-.close {
-  @include              base_close;
+.remove {
+  @include              base_popup;
+  @include              synthwave_red;
+}
+
+.add {
+  @include              base_popup;
+  @include              synthwave_green;
 }
 
 @keyframes arise {
-  0%    { opacity:       0; }
-  95%   { opacity:       0; }
-  100%  { opacity:       1; }
+  0%    { opacity:      0; }
+  95%   { opacity:      0; }
+  100%  { opacity:      1; }
 }
