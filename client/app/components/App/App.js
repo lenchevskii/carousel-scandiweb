@@ -12,7 +12,7 @@ const App = () => (
     <Carousel />
     <Footer />
 
-    <Popup placeholder  = { 'Jump to ..' }
+    {/* <Popup placeholder  = { 'Jump to ..' }
            style        = { styles.jump }
            close        = { true }
            id           = { 'jump' }
@@ -21,7 +21,7 @@ const App = () => (
            style        = { styles.add }
            close        = { true }
            id           = { 'add' }
-    />
+    /> */}
   </div>
 )
 
