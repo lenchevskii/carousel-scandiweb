@@ -49,7 +49,7 @@ Run script to build client side via Webpack bundler:
 
 Because of using a bundler, the client deploy environment has to have only JS engine to run the project.
 
-The client\`s build stored at the `/bundle` directory.
+The client's build stored at the `/bundle` directory.
 
 Simplified client deploy was implement through the **GitHub Pages** - [Visual Worm](https://lenchevskii.github.io/visualworm/).
 
@@ -74,7 +74,7 @@ Test server via `jest`:
   npm run test
   ```
 
-To use server side it is necessary to create the `.env` file with own configuration (`PORT`, `PASSWD`, .. etc. ).
+To use the server side, you need to create a `.env` file with your own configuration. (`PORT`, `PASSWD`, .. etc. ).
 
 The following tips can simplify developer's hard life:
 
