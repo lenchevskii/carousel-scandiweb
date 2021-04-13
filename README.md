@@ -1,7 +1,3 @@
-*... currently in progress*
-
----
-
 ### Scandiweb Test Task (**[full text one's](https://github.com/lenchevskii/visualworm/blob/main/TASK.md)**)
 
   **To-do list:**
